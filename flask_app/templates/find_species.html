@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+    <div class="content-section" style="text-align: center; width: 1000px; margin: 0 auto;">
+        <div class="article-metadata"><a class="mr-2">Projekt z Zarządzania Wiedzą</a></div>
+        <h2><a class="article-title">ZNAJDŹ GATUNEK</a></h2>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="{{ category }}">{{ message }}</div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+        <form method=post enctype=multipart/form-data>
+            <input type=submit class="btn btn-primary" value="Znajdź gatunek">
+        </form>
+    </div>
+{% endblock %}
