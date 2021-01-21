@@ -13,6 +13,12 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
+        <Class IRI="#Cecha"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Umiejętność"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Gatunek"/>
     </Declaration>
     <Declaration>
@@ -29,6 +35,12 @@
     </Declaration>
     <Declaration>
         <Class IRI="#Sposob_odzywiania"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#posiada_cechę"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#posiada_umiejętność"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#ma_sposob_odzywiania"/>
@@ -52,34 +64,49 @@
         <DataProperty IRI="#posiada_mase_ciala"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#posiada_ogon"/>
+        <NamedIndividual IRI="#Ameryka_Południowa"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#posiada_pletwy"/>
+        <NamedIndividual IRI="#Ameryka_Północna"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#posiada_skrzydla"/>
+        <NamedIndividual IRI="#Ameryka_Środkowa"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#posiada_trabe"/>
+        <NamedIndividual IRI="#Latanie"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#potrafi_latac"/>
+        <NamedIndividual IRI="#Mięsożerność"/>
     </Declaration>
     <Declaration>
-        <DataProperty IRI="#potrafi_plywac"/>
+        <NamedIndividual IRI="#Ogon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Płetwy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pływanie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Roślinożerność"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Skrzydła"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Trąba"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wszystkożerność"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wymarłe"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Zagrożone"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Afryka"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Ameryka_Polnocna"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Ameryka_Poludniowa"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Ameryka_Srodkowa"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Aquila"/>
@@ -101,9 +128,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Loxodonta"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Miesozernosc"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Morza"/>
@@ -136,29 +160,31 @@
         <NamedIndividual IRI="#Płazy"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Roslinozernosc"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Ssaki"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Słoń_afrykański"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Wszystkozernosc"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Wymarle"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Wątrobowce"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Zagrozone"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Gatunek"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#posiada_cechę"/>
+            <Class IRI="#Cecha"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gatunek"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#posiada_umiejętność"/>
+            <Class IRI="#Umiejętność"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Gatunek"/>
         <ObjectSomeValuesFrom>
@@ -195,80 +221,71 @@
         </DataSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Gatunek"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#posiada_ogon"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
+        <Class IRI="#Rodzaj"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#nalezy_do_gromady"/>
+            <Class IRI="#Gromada"/>
+        </ObjectSomeValuesFrom>
     </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Gatunek"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#posiada_pletwy"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Gatunek"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#posiada_skrzydla"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Gatunek"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#posiada_trabe"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Gatunek"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#potrafi_latac"/>
-            <Datatype abbreviatedIRI="xsd:boolean"/>
-        </DataSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
-        <ObjectOneOf>
-            <NamedIndividual IRI="#Najmniejszej_troski"/>
-            <NamedIndividual IRI="#Nierozpoznane"/>
-            <NamedIndividual IRI="#Wymarle"/>
-            <NamedIndividual IRI="#Zagrozone"/>
-        </ObjectOneOf>
-    </EquivalentClasses>
-    <EquivalentClasses>
+    <ClassAssertion>
+        <Class IRI="#Obszar"/>
+        <NamedIndividual IRI="#Ameryka_Południowa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Obszar"/>
+        <NamedIndividual IRI="#Ameryka_Północna"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Obszar"/>
+        <NamedIndividual IRI="#Ameryka_Środkowa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Umiejętność"/>
+        <NamedIndividual IRI="#Latanie"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Sposob_odzywiania"/>
-        <ObjectOneOf>
-            <NamedIndividual IRI="#Miesozernosc"/>
-            <NamedIndividual IRI="#Roslinozernosc"/>
-            <NamedIndividual IRI="#Wszystkozernosc"/>
-        </ObjectOneOf>
-    </EquivalentClasses>
-    <SubClassOf>
-        <Class IRI="#Gatunek"/>
-        <Class IRI="#Rodzaj"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="#Rodzaj"/>
-        <Class IRI="#Gromada"/>
-    </SubClassOf>
+        <NamedIndividual IRI="#Mięsożerność"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cecha"/>
+        <NamedIndividual IRI="#Ogon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cecha"/>
+        <NamedIndividual IRI="#Płetwy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Umiejętność"/>
+        <NamedIndividual IRI="#Pływanie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sposob_odzywiania"/>
+        <NamedIndividual IRI="#Roślinożerność"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cecha"/>
+        <NamedIndividual IRI="#Skrzydła"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cecha"/>
+        <NamedIndividual IRI="#Trąba"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sposob_odzywiania"/>
+        <NamedIndividual IRI="#Wszystkożerność"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
+        <NamedIndividual IRI="#Wymarłe"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
+        <NamedIndividual IRI="#Zagrożone"/>
+    </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Obszar"/>
         <NamedIndividual IRI="#Afryka"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Obszar"/>
-        <NamedIndividual IRI="#Ameryka_Polnocna"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Obszar"/>
-        <NamedIndividual IRI="#Ameryka_Poludniowa"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Obszar"/>
-        <NamedIndividual IRI="#Ameryka_Srodkowa"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Rodzaj"/>
@@ -347,16 +364,8 @@
         <NamedIndividual IRI="#Słoń_afrykański"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
-        <NamedIndividual IRI="#Wymarle"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Gromada"/>
         <NamedIndividual IRI="#Wątrobowce"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
-        <NamedIndividual IRI="#Zagrozone"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#nalezy_do_gromady"/>
@@ -364,25 +373,33 @@
         <NamedIndividual IRI="#Ptaki"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#posiada_umiejętność"/>
+        <NamedIndividual IRI="#Orzeł_przedni"/>
+        <NamedIndividual IRI="#Latanie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#nalezy_do_rodzaju"/>
         <NamedIndividual IRI="#Orzeł_przedni"/>
         <NamedIndividual IRI="#Aquila"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#posiada_cechę"/>
+        <NamedIndividual IRI="#Słoń_afrykański"/>
+        <NamedIndividual IRI="#Trąba"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#nalezy_do_rodzaju"/>
         <NamedIndividual IRI="#Słoń_afrykański"/>
         <NamedIndividual IRI="#Loxodonta"/>
     </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#potrafi_latac"/>
-        <NamedIndividual IRI="#Orzeł_przedni"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#posiada_trabe"/>
-        <NamedIndividual IRI="#Słoń_afrykański"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#posiada_cechę"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#posiada_umiejętność"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#ma_sposob_odzywiania"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -411,30 +428,6 @@
         <DataProperty IRI="#posiada_mase_ciala"/>
         <DataProperty abbreviatedIRI="owl:topDataProperty"/>
     </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#posiada_ogon"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#posiada_pletwy"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#posiada_skrzydla"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#posiada_trabe"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#potrafi_latac"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
-    <SubDataPropertyOf>
-        <DataProperty IRI="#potrafi_plywac"/>
-        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
-    </SubDataPropertyOf>
     <DataPropertyRange>
         <DataProperty IRI="#posiada_liczbe_odnozy"/>
         <Datatype abbreviatedIRI="xsd:int"/>
@@ -442,30 +435,6 @@
     <DataPropertyRange>
         <DataProperty IRI="#posiada_mase_ciala"/>
         <Datatype abbreviatedIRI="xsd:int"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#posiada_ogon"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#posiada_pletwy"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#posiada_skrzydla"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#posiada_trabe"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#potrafi_latac"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="#potrafi_plywac"/>
-        <Datatype abbreviatedIRI="xsd:boolean"/>
     </DataPropertyRange>
     <DLSafeRule>
         <Annotation>
@@ -519,7 +488,7 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Trąbowce są ssakami</Literal>
+            <Literal>Trąbowce są roślinożerne</Literal>
         </Annotation>
         <Body>
             <ClassAtom>
@@ -527,53 +496,16 @@
                 <Variable IRI="#G"/>
             </ClassAtom>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#nalezy_do_rodzaju"/>
+                <ObjectProperty IRI="#posiada_cechę"/>
                 <Variable IRI="#G"/>
-                <Variable IRI="#R"/>
+                <NamedIndividual IRI="#Trąba"/>
             </ObjectPropertyAtom>
-            <DataPropertyAtom>
-                <DataProperty IRI="#posiada_trabe"/>
-                <Variable IRI="#G"/>
-                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-            </DataPropertyAtom>
-        </Body>
-        <Head>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#nalezy_do_gromady"/>
-                <Variable IRI="#R"/>
-                <NamedIndividual IRI="#Ssaki"/>
-            </ObjectPropertyAtom>
-        </Head>
-    </DLSafeRule>
-    <DLSafeRule>
-        <Annotation>
-            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal></Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Roślinożerne trąbowce</Literal>
-        </Annotation>
-        <Body>
-            <ClassAtom>
-                <Class IRI="#Gatunek"/>
-                <Variable IRI="#G"/>
-            </ClassAtom>
-            <DataPropertyAtom>
-                <DataProperty IRI="#posiada_trabe"/>
-                <Variable IRI="#G"/>
-                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-            </DataPropertyAtom>
         </Body>
         <Head>
             <ObjectPropertyAtom>
                 <ObjectProperty IRI="#ma_sposob_odzywiania"/>
                 <Variable IRI="#G"/>
-                <NamedIndividual IRI="#Roslinozernosc"/>
+                <NamedIndividual IRI="#Roślinożerność"/>
             </ObjectPropertyAtom>
         </Head>
     </DLSafeRule>
@@ -595,11 +527,11 @@
                 <Class IRI="#Gatunek"/>
                 <Variable IRI="#G"/>
             </ClassAtom>
-            <DataPropertyAtom>
-                <DataProperty IRI="#posiada_trabe"/>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#posiada_cechę"/>
                 <Variable IRI="#G"/>
-                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-            </DataPropertyAtom>
+                <NamedIndividual IRI="#Trąba"/>
+            </ObjectPropertyAtom>
         </Body>
         <Head>
             <DataPropertyAtom>
@@ -620,6 +552,43 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Trąbowce są ssakami</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Gatunek"/>
+                <Variable IRI="#G"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#nalezy_do_rodzaju"/>
+                <Variable IRI="#G"/>
+                <Variable IRI="#R"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#posiada_cechę"/>
+                <Variable IRI="#G"/>
+                <NamedIndividual IRI="#Trąba"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#nalezy_do_gromady"/>
+                <Variable IRI="#R"/>
+                <NamedIndividual IRI="#Ssaki"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
             <Literal>Umiejętność latania</Literal>
         </Annotation>
         <Body>
@@ -627,18 +596,18 @@
                 <Class IRI="#Gatunek"/>
                 <Variable IRI="#G"/>
             </ClassAtom>
-            <DataPropertyAtom>
-                <DataProperty IRI="#potrafi_latac"/>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#posiada_umiejętność"/>
                 <Variable IRI="#G"/>
-                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-            </DataPropertyAtom>
+                <NamedIndividual IRI="#Latanie"/>
+            </ObjectPropertyAtom>
         </Body>
         <Head>
-            <DataPropertyAtom>
-                <DataProperty IRI="#posiada_skrzydla"/>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#posiada_cechę"/>
                 <Variable IRI="#G"/>
-                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-            </DataPropertyAtom>
+                <NamedIndividual IRI="#Skrzydła"/>
+            </ObjectPropertyAtom>
         </Head>
     </DLSafeRule>
 </Ontology>
