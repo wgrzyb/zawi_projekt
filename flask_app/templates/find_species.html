@@ -10,8 +10,122 @@
                 {% endfor %}
             {% endif %}
         {% endwith %}
-        <form method=post enctype=multipart/form-data>
+
+        <div class="input-group">
+            <select class="custom-select" id="feature-select">
+                {% for feature in features %}
+                     <option>{{feature}}</option>
+                {% endfor %}
+            </select>
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" id="add-feature-btn" type="button" onclick="add_feature()">Dodaj cechę</button>
+            </div>
+        </div>
+
+        <hr>
+        <form method=post>
+            <div id="feature-form-container"></div>
             <input type=submit class="btn btn-primary" value="Znajdź gatunek">
         </form>
     </div>
+
+    <script>
+    function add_feature() {
+        <!-- Ustawienie zmiennych -->
+        var features = {{ features|tojson|safe }};
+        var feature_select = document.getElementById("feature-select");
+        var feature_name = feature_select.value;
+
+        <!-- Dodanie feature_name do formularza -->
+        var remove_feature_button_span = document.createElement("SPAN");
+        remove_feature_button_span.setAttribute("aria-hidden", "true");
+        remove_feature_button_span.innerHTML = "&times;";
+
+        var remove_feature_button = document.createElement("BUTTON");
+        remove_feature_button.setAttribute("type", "button");
+        remove_feature_button.setAttribute("class", "col-sm-1 close");
+        remove_feature_button.setAttribute("aria-label", "Remove");
+        remove_feature_button.appendChild(remove_feature_button_span);
+
+        var feature_label = document.createElement("LABEL");
+        feature_label.setAttribute("class", "col-sm-3 col-form-label");
+        feature_label.innerHTML = feature_name;
+
+        var feature_input = document.createElement("INPUT");
+        feature_input_id = features[feature_name]["id"];
+        feature_input_type = features[feature_name]["type"];
+        feature_input.setAttribute("id", feature_input_id);
+        feature_input.setAttribute("name", feature_input_id);
+        feature_label.setAttribute("for", feature_input_id);
+        switch (feature_input_type) {
+            case "bool":
+                feature_input.setAttribute("type", "checkbox");
+                feature_input.setAttribute("class", "form-control-sm");
+                break;
+            case "int":
+                feature_input.required = true;
+                feature_input.setAttribute("type", "number");
+                feature_input.setAttribute("class", "form-control");
+                break;
+            case "str":
+                feature_input.required = true;
+                feature_input.setAttribute("type", "text");
+                feature_input.setAttribute("class", "form-control");
+                break;
+            default:
+                feature_input.required = true;
+                feature_input.setAttribute("type", "text");
+                feature_input.setAttribute("class", "form-control");
+                break;
+        }
+
+        var feature_input_div = document.createElement("DIV");
+        feature_input_div.setAttribute("class", "col-sm-8");
+        feature_input_div.appendChild(feature_input);
+
+        var feature_div = document.createElement("DIV");
+        feature_div.setAttribute("class", "form-group row");
+        feature_div.appendChild(remove_feature_button);
+        feature_div.appendChild(feature_label);
+        feature_div.appendChild(feature_input_div);
+        remove_feature_button.addEventListener("click", function(){remove_feature(feature_div);}, false);
+
+        var feature_form_container = document.getElementById("feature-form-container");
+        feature_form_container.appendChild(feature_div);
+
+        <!-- Uaktualnienie feature_select -->
+        feature_select.remove(feature_select.selectedIndex);
+        if (feature_select.options.length == 0) {
+            add_feature_button = document.getElementById("add-feature-btn");
+            add_feature_button.disabled = true;
+            feature_select.disabled = true;
+        }
+    }
+    </script>
+
+    <script>
+    function remove_feature(feature_div) {
+        <!-- Ustawienie zmiennych -->
+        var feature_labels = feature_div.getElementsByTagName("LABEL");
+        var feature_select = document.getElementById("feature-select");
+        for (var i = 0; i < feature_labels.length; i++) {
+            feature_label = feature_labels[i];
+            feature_name = (feature_label.innerText || feature_label.textContent);
+            <!-- Dodanie feature_name do feature_select -->
+            var feature_option = document.createElement("option");
+            feature_option.text = feature_name;
+            feature_select.add(feature_option);
+        }
+
+        <!-- Uaktualnienie feature_select -->
+        if (feature_select.disabled && feature_select.options.length > 0) {
+            add_feature_button = document.getElementById("add-feature-btn");
+            add_feature_button.disabled = false;
+            feature_select.disabled = false;
+        }
+
+        <!-- Usunięcie feature_name z formularza -->
+        feature_div.remove();
+    }
+    </script>
 {% endblock %}
