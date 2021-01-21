@@ -29,6 +29,9 @@ def get_features():
 @app.route('/find_species', methods=['GET', 'POST'])
 def find_species():
     if request.method == 'POST':
+        if len(request.form) == 0:
+            flash(f"Nie podano cech!", 'alert alert-danger')
+            return redirect(request.url)
         for feature in request.form:
             print(f"{feature}={request.form.get(feature)}")
         flash(f"Wiadomość!", 'alert alert-success')
