@@ -1,0 +1,649 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat">
+    <Prefix name="" IRI="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Gatunek"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gromada"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Obszar"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rodzaj"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sposob_odzywiania"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#ma_sposob_odzywiania"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#nalezy_do_gromady"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#nalezy_do_rodzaju"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#wystepuje_na_obszarze"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#znajduje_sie_w_kategorii_zagrozenia"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#posiada_liczbe_odnozy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#posiada_mase_ciala"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#posiada_ogon"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#posiada_pletwy"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#posiada_skrzydla"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#posiada_trabe"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#potrafi_latac"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#potrafi_plywac"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Afryka"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ameryka_Polnocna"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ameryka_Poludniowa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ameryka_Srodkowa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Aquila"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Australia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Azja"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Europa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Gady"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Krążkopławy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Loxodonta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Miesozernosc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Morza"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Najmniejszej_troski"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Nierozpoznane"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Oceany"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Orzeł_przedni"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Owady"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Pajęczaki"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Paprotniki"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ptaki"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Płazy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Roslinozernosc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ssaki"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Słoń_afrykański"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wszystkozernosc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wymarle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wątrobowce"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Zagrozone"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Gatunek"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#ma_sposob_odzywiania"/>
+            <Class IRI="#Sposob_odzywiania"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gatunek"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#nalezy_do_rodzaju"/>
+            <Class IRI="#Rodzaj"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gatunek"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#wystepuje_na_obszarze"/>
+            <Class IRI="#Obszar"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gatunek"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#znajduje_sie_w_kategorii_zagrozenia"/>
+            <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gatunek"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#posiada_mase_ciala"/>
+            <Datatype abbreviatedIRI="xsd:int"/>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gatunek"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#posiada_ogon"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gatunek"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#posiada_pletwy"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gatunek"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#posiada_skrzydla"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gatunek"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#posiada_trabe"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gatunek"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#potrafi_latac"/>
+            <Datatype abbreviatedIRI="xsd:boolean"/>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Najmniejszej_troski"/>
+            <NamedIndividual IRI="#Nierozpoznane"/>
+            <NamedIndividual IRI="#Wymarle"/>
+            <NamedIndividual IRI="#Zagrozone"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Sposob_odzywiania"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Miesozernosc"/>
+            <NamedIndividual IRI="#Roslinozernosc"/>
+            <NamedIndividual IRI="#Wszystkozernosc"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Gatunek"/>
+        <Class IRI="#Rodzaj"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rodzaj"/>
+        <Class IRI="#Gromada"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Obszar"/>
+        <NamedIndividual IRI="#Afryka"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Obszar"/>
+        <NamedIndividual IRI="#Ameryka_Polnocna"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Obszar"/>
+        <NamedIndividual IRI="#Ameryka_Poludniowa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Obszar"/>
+        <NamedIndividual IRI="#Ameryka_Srodkowa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rodzaj"/>
+        <NamedIndividual IRI="#Aquila"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Obszar"/>
+        <NamedIndividual IRI="#Australia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Obszar"/>
+        <NamedIndividual IRI="#Azja"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Obszar"/>
+        <NamedIndividual IRI="#Europa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gromada"/>
+        <NamedIndividual IRI="#Gady"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gromada"/>
+        <NamedIndividual IRI="#Krążkopławy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rodzaj"/>
+        <NamedIndividual IRI="#Loxodonta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Obszar"/>
+        <NamedIndividual IRI="#Morza"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
+        <NamedIndividual IRI="#Najmniejszej_troski"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
+        <NamedIndividual IRI="#Nierozpoznane"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Obszar"/>
+        <NamedIndividual IRI="#Oceany"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gatunek"/>
+        <NamedIndividual IRI="#Orzeł_przedni"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gromada"/>
+        <NamedIndividual IRI="#Owady"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gromada"/>
+        <NamedIndividual IRI="#Pajęczaki"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gromada"/>
+        <NamedIndividual IRI="#Paprotniki"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gromada"/>
+        <NamedIndividual IRI="#Ptaki"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gromada"/>
+        <NamedIndividual IRI="#Płazy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gromada"/>
+        <NamedIndividual IRI="#Ssaki"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gatunek"/>
+        <NamedIndividual IRI="#Słoń_afrykański"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
+        <NamedIndividual IRI="#Wymarle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gromada"/>
+        <NamedIndividual IRI="#Wątrobowce"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
+        <NamedIndividual IRI="#Zagrozone"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nalezy_do_gromady"/>
+        <NamedIndividual IRI="#Aquila"/>
+        <NamedIndividual IRI="#Ptaki"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nalezy_do_rodzaju"/>
+        <NamedIndividual IRI="#Orzeł_przedni"/>
+        <NamedIndividual IRI="#Aquila"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nalezy_do_rodzaju"/>
+        <NamedIndividual IRI="#Słoń_afrykański"/>
+        <NamedIndividual IRI="#Loxodonta"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#potrafi_latac"/>
+        <NamedIndividual IRI="#Orzeł_przedni"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#posiada_trabe"/>
+        <NamedIndividual IRI="#Słoń_afrykański"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#ma_sposob_odzywiania"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#nalezy_do_gromady"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#nalezy_do_rodzaju"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#wystepuje_na_obszarze"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#znajduje_sie_w_kategorii_zagrozenia"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#posiada_liczbe_odnozy"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#posiada_mase_ciala"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#posiada_ogon"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#posiada_pletwy"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#posiada_skrzydla"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#posiada_trabe"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#potrafi_latac"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#potrafi_plywac"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="#posiada_liczbe_odnozy"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#posiada_mase_ciala"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#posiada_ogon"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#posiada_pletwy"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#posiada_skrzydla"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#posiada_trabe"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#potrafi_latac"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#potrafi_plywac"/>
+        <Datatype abbreviatedIRI="xsd:boolean"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Liczba odnóży ptaków</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Gatunek"/>
+                <Variable IRI="#G"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Rodzaj"/>
+                <Variable IRI="#R"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#nalezy_do_rodzaju"/>
+                <Variable IRI="#G"/>
+                <Variable IRI="#R"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#nalezy_do_gromady"/>
+                <Variable IRI="#R"/>
+                <NamedIndividual IRI="#Ptaki"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#posiada_liczbe_odnozy"/>
+                <Variable IRI="#G"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Trąbowce są ssakami</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Gatunek"/>
+                <Variable IRI="#G"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#nalezy_do_rodzaju"/>
+                <Variable IRI="#G"/>
+                <Variable IRI="#R"/>
+            </ObjectPropertyAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#posiada_trabe"/>
+                <Variable IRI="#G"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#nalezy_do_gromady"/>
+                <Variable IRI="#R"/>
+                <NamedIndividual IRI="#Ssaki"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Roślinożerne trąbowce</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Gatunek"/>
+                <Variable IRI="#G"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#posiada_trabe"/>
+                <Variable IRI="#G"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#ma_sposob_odzywiania"/>
+                <Variable IRI="#G"/>
+                <NamedIndividual IRI="#Roslinozernosc"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Liczba odnóży trąbowców</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Gatunek"/>
+                <Variable IRI="#G"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#posiada_trabe"/>
+                <Variable IRI="#G"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#posiada_liczbe_odnozy"/>
+                <Variable IRI="#G"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Umiejętność latania</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Gatunek"/>
+                <Variable IRI="#G"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#potrafi_latac"/>
+                <Variable IRI="#G"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#posiada_skrzydla"/>
+                <Variable IRI="#G"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
