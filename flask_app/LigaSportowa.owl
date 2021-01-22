@@ -1,0 +1,1307 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/root/ontologies/2020/11/LigaSportowa"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/root/ontologies/2020/11/LigaSportowa">
+    <Prefix name="" IRI="http://www.semanticweb.org/root/ontologies/2020/11/LigaSportowa"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="test" IRI="http://www.semanticweb.org/root/ontologies/2020/11/LigaSportowa"/>
+    <Declaration>
+        <Class IRI="#Agent_zawodnika"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Asystent_trenera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Członek_kadry_szkoleniowej"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Członek_zespołu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Doświadczenie"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Konferencja"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Miasto"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nagroda"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Pozycja"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Trener"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Zawodnik"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Zespół"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#gra_na_pozycji"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#posiada_agenta"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#posiada_doświadczenie"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#posiada_pracownika"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#posiada_trenera"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#pracuje_dla"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reprezentuje_miasto"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#reprezentuje_zawodnika"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#zdobył_nagrodę"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#znajduje_się_w_konferencji"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#gra_z_numerem"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#posiada_wynagrodzenie"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#pracuje_w_lidze_od"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#zdobyta_w_roku"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#zdraftowany_w_roku"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#zdraftowany_z_numerem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Anthony_Edwards"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Atlanta"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Atlanta_Hawks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Boston"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Boston_Celtics"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Brooklyn_Nets"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Center"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Charlotte"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Charlotte_Hornets"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chicago"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Chicago_Bulls"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cleveland"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Cleveland_Cavaliers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Coach_of_the_Year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dallas"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Dallas_Mavericks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Defensive_Player_of_the_Year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Denver"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Denver_Nuggets"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Detroit"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Detroit_Pistons"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Forward"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Golden_State_Warriors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Guard"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Houston"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Houston_Rockets"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Indiana"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Indiana_Pacers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#James_Wiseman"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Klutch_Sports_Group"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kobe_Bryant"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Konferencja_wschodnia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Konferencja_zachodnia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Los_Angeles"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Los_Angeles_Clippers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Los_Angeles_Lakers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Memphis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Memphis_Grizzlies"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Miami"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Miami_Heat"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Milwaukee"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Milwaukee_Bucks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Minnesota"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Minnesota_Timberwolves"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Most_Improved_Player"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Most_Valuable_Player"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#New_Orleans"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#New_Orleans_Pelicans"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#New_York"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#New_York_Knicks"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Oklahoma_City"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Oklahoma_City_Thunder"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Orlando"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Orlando_Magic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Phil_Jackson"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Philadelphia"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Philadelphia_76ers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Phoenix"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Phoenix_Suns"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Portland"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Portland_Trail_Blazers"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Retired"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rob_Pelinka"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rookie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Rookie_of_the_Year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sacramento"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sacramento_Kings"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#San_Antonio"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#San_Antonio_Spurs"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#San_Francisco"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Scoring_Title"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sixth_Man_of_the_Year"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Sophomore"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Toronto"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Toronto_Raptors"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Tyler_Herro"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Utah"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Utah_Jazz"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Veteran"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Washington"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Washington_Wizards"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#Agent_zawodnika"/>
+        <ObjectIntersectionOf>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#reprezentuje_zawodnika"/>
+                <Class IRI="#Zawodnik"/>
+            </ObjectSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#posiada_wynagrodzenie"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:int"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Członek_zespołu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#pracuje_dla"/>
+            <Class IRI="#Zespół"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Członek_zespołu"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#zdobył_nagrodę"/>
+            <Class IRI="#Nagroda"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Członek_zespołu"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#posiada_wynagrodzenie"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:int"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Członek_zespołu"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#pracuje_w_lidze_od"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:int"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Doświadczenie"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Rookie"/>
+            <NamedIndividual IRI="#Sophomore"/>
+            <NamedIndividual IRI="#Veteran"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Konferencja"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Konferencja_wschodnia"/>
+            <NamedIndividual IRI="#Konferencja_zachodnia"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Miasto"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#znajduje_się_w_konferencji"/>
+            <Class IRI="#Konferencja"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Nagroda"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#zdobyta_w_roku"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:int"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1946</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Pozycja"/>
+        <ObjectOneOf>
+            <NamedIndividual IRI="#Center"/>
+            <NamedIndividual IRI="#Forward"/>
+            <NamedIndividual IRI="#Guard"/>
+        </ObjectOneOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Zawodnik"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#gra_na_pozycji"/>
+            <Class IRI="#Pozycja"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Zawodnik"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#posiada_agenta"/>
+            <Class IRI="#Agent_zawodnika"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Zawodnik"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#posiada_doświadczenie"/>
+            <Class IRI="#Doświadczenie"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Zawodnik"/>
+        <DataSomeValuesFrom>
+            <DataProperty IRI="#zdraftowany_z_numerem"/>
+            <DatatypeRestriction>
+                <Datatype abbreviatedIRI="xsd:int"/>
+                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+                </FacetRestriction>
+            </DatatypeRestriction>
+        </DataSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Zespół"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#posiada_pracownika"/>
+            <Class IRI="#Członek_zespołu"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Zespół"/>
+        <ObjectExactCardinality cardinality="1">
+            <ObjectProperty IRI="#reprezentuje_miasto"/>
+            <Class IRI="#Miasto"/>
+        </ObjectExactCardinality>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#Asystent_trenera"/>
+        <Class IRI="#Członek_kadry_szkoleniowej"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Członek_kadry_szkoleniowej"/>
+        <Class IRI="#Członek_zespołu"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Trener"/>
+        <Class IRI="#Członek_kadry_szkoleniowej"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Zawodnik"/>
+        <Class IRI="#Członek_zespołu"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Zawodnik"/>
+        <NamedIndividual IRI="#Anthony_Edwards"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Atlanta"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Atlanta_Hawks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Boston"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Boston_Celtics"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Brooklyn_Nets"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pozycja"/>
+        <NamedIndividual IRI="#Center"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Charlotte"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Charlotte_Hornets"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Chicago"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Chicago_Bulls"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Cleveland"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Cleveland_Cavaliers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Nagroda"/>
+        <NamedIndividual IRI="#Coach_of_the_Year"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Dallas"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Dallas_Mavericks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Nagroda"/>
+        <NamedIndividual IRI="#Defensive_Player_of_the_Year"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Denver"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Denver_Nuggets"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Detroit"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Detroit_Pistons"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pozycja"/>
+        <NamedIndividual IRI="#Forward"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Golden_State_Warriors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Pozycja"/>
+        <NamedIndividual IRI="#Guard"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Houston"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Houston_Rockets"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Indiana"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Indiana_Pacers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zawodnik"/>
+        <NamedIndividual IRI="#James_Wiseman"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Agent_zawodnika"/>
+        <NamedIndividual IRI="#Klutch_Sports_Group"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zawodnik"/>
+        <NamedIndividual IRI="#Kobe_Bryant"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Konferencja"/>
+        <NamedIndividual IRI="#Konferencja_wschodnia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Konferencja"/>
+        <NamedIndividual IRI="#Konferencja_zachodnia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Los_Angeles"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Los_Angeles_Clippers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Los_Angeles_Lakers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Memphis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Memphis_Grizzlies"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Miami"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Miami_Heat"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Milwaukee"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Milwaukee_Bucks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Minnesota"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Minnesota_Timberwolves"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Nagroda"/>
+        <NamedIndividual IRI="#Most_Improved_Player"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Nagroda"/>
+        <NamedIndividual IRI="#Most_Valuable_Player"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#New_Orleans"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#New_Orleans_Pelicans"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#New_York"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#New_York_Knicks"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Oklahoma_City"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Oklahoma_City_Thunder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Orlando"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Orlando_Magic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Trener"/>
+        <NamedIndividual IRI="#Phil_Jackson"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Philadelphia"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Philadelphia_76ers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Phoenix"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Phoenix_Suns"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Portland"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Portland_Trail_Blazers"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Agent_zawodnika"/>
+        <NamedIndividual IRI="#Rob_Pelinka"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Doświadczenie"/>
+        <NamedIndividual IRI="#Rookie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Nagroda"/>
+        <NamedIndividual IRI="#Rookie_of_the_Year"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Sacramento"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Sacramento_Kings"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#San_Antonio"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#San_Antonio_Spurs"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#San_Francisco"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Nagroda"/>
+        <NamedIndividual IRI="#Scoring_Title"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Nagroda"/>
+        <NamedIndividual IRI="#Sixth_Man_of_the_Year"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Doświadczenie"/>
+        <NamedIndividual IRI="#Sophomore"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Toronto"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Toronto_Raptors"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zawodnik"/>
+        <NamedIndividual IRI="#Tyler_Herro"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Utah"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Utah_Jazz"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Doświadczenie"/>
+        <NamedIndividual IRI="#Veteran"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Miasto"/>
+        <NamedIndividual IRI="#Washington"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Zespół"/>
+        <NamedIndividual IRI="#Washington_Wizards"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#posiada_agenta"/>
+        <NamedIndividual IRI="#Anthony_Edwards"/>
+        <NamedIndividual IRI="#Klutch_Sports_Group"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pracuje_dla"/>
+        <NamedIndividual IRI="#Anthony_Edwards"/>
+        <NamedIndividual IRI="#Minnesota_Timberwolves"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#znajduje_się_w_konferencji"/>
+        <NamedIndividual IRI="#Klutch_Sports_Group"/>
+        <NamedIndividual IRI="#Konferencja_zachodnia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#gra_na_pozycji"/>
+        <NamedIndividual IRI="#Kobe_Bryant"/>
+        <NamedIndividual IRI="#Guard"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#posiada_agenta"/>
+        <NamedIndividual IRI="#Kobe_Bryant"/>
+        <NamedIndividual IRI="#Rob_Pelinka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pracuje_dla"/>
+        <NamedIndividual IRI="#Kobe_Bryant"/>
+        <NamedIndividual IRI="#Los_Angeles_Lakers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#znajduje_się_w_konferencji"/>
+        <NamedIndividual IRI="#Los_Angeles"/>
+        <NamedIndividual IRI="#Konferencja_zachodnia"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#reprezentuje_miasto"/>
+        <NamedIndividual IRI="#Los_Angeles_Lakers"/>
+        <NamedIndividual IRI="#Los_Angeles"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#pracuje_dla"/>
+        <NamedIndividual IRI="#Phil_Jackson"/>
+        <NamedIndividual IRI="#Los_Angeles_Lakers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#gra_na_pozycji"/>
+        <NamedIndividual IRI="#Tyler_Herro"/>
+        <NamedIndividual IRI="#Guard"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#pracuje_w_lidze_od"/>
+        <NamedIndividual IRI="#Anthony_Edwards"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#zdraftowany_z_numerem"/>
+        <NamedIndividual IRI="#Anthony_Edwards"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#pracuje_w_lidze_od"/>
+        <NamedIndividual IRI="#James_Wiseman"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">0</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#zdraftowany_z_numerem"/>
+        <NamedIndividual IRI="#James_Wiseman"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">2</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#gra_z_numerem"/>
+        <NamedIndividual IRI="#Kobe_Bryant"/>
+        <Literal>24</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#posiada_wynagrodzenie"/>
+        <NamedIndividual IRI="#Kobe_Bryant"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">20000000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#pracuje_w_lidze_od"/>
+        <NamedIndividual IRI="#Kobe_Bryant"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">15</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#posiada_wynagrodzenie"/>
+        <NamedIndividual IRI="#Phil_Jackson"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">8000000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#posiada_wynagrodzenie"/>
+        <NamedIndividual IRI="#Rob_Pelinka"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1000000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#pracuje_w_lidze_od"/>
+        <NamedIndividual IRI="#Tyler_Herro"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#gra_na_pozycji"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#posiada_agenta"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#posiada_doświadczenie"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#posiada_pracownika"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#posiada_trenera"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#pracuje_dla"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#reprezentuje_miasto"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#reprezentuje_zawodnika"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#znajduje_się_w_konferencji"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#posiada_agenta"/>
+        <ObjectProperty IRI="#reprezentuje_zawodnika"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#posiada_pracownika"/>
+        <ObjectProperty IRI="#pracuje_dla"/>
+    </InverseObjectProperties>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#gra_z_numerem"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#posiada_wynagrodzenie"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#pracuje_w_lidze_od"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#zdobyta_w_roku"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#zdraftowany_w_roku"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <SubDataPropertyOf>
+        <DataProperty IRI="#zdraftowany_z_numerem"/>
+        <DataProperty abbreviatedIRI="owl:topDataProperty"/>
+    </SubDataPropertyOf>
+    <DataPropertyRange>
+        <DataProperty IRI="#gra_z_numerem"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#posiada_wynagrodzenie"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#pracuje_w_lidze_od"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#zdobyta_w_roku"/>
+        <DatatypeRestriction>
+            <Datatype abbreviatedIRI="xsd:int"/>
+            <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1946</Literal>
+            </FacetRestriction>
+        </DatatypeRestriction>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#zdraftowany_w_roku"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#zdraftowany_z_numerem"/>
+        <Datatype abbreviatedIRI="xsd:int"/>
+    </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Nazwa miasta na podstawie nazwy zespołu</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Zespół"/>
+                <Variable IRI="#Z"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Miasto"/>
+                <Variable IRI="#M"/>
+            </ClassAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#startsWith">
+                <Variable IRI="#Z"/>
+                <Variable IRI="#M"/>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#reprezentuje_miasto"/>
+                <Variable IRI="#Z"/>
+                <Variable IRI="#M"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Wynagrodzenie Rookie #1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Zawodnik"/>
+                <Variable IRI="#Z"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#pracuje_w_lidze_od"/>
+                <Variable IRI="#Z"/>
+                <Variable IRI="#x"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#x"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#zdraftowany_z_numerem"/>
+                <Variable IRI="#Z"/>
+                <Variable IRI="#y"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#y"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#posiada_wynagrodzenie"/>
+                <Variable IRI="#Z"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8130200</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Wynagrodzenie Rookie #2</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Zawodnik"/>
+                <Variable IRI="#Z"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#pracuje_w_lidze_od"/>
+                <Variable IRI="#Z"/>
+                <Variable IRI="#x"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#x"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#zdraftowany_z_numerem"/>
+                <Variable IRI="#Z"/>
+                <Variable IRI="#y"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#y"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#posiada_wynagrodzenie"/>
+                <Variable IRI="#Z"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7275200</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Wynagrodzenie Rookie #3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Zawodnik"/>
+                <Variable IRI="#Z"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#pracuje_w_lidze_od"/>
+                <Variable IRI="#Z"/>
+                <Variable IRI="#x"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#x"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </BuiltInAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#zdraftowany_z_numerem"/>
+                <Variable IRI="#Z"/>
+                <Variable IRI="#y"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#y"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#posiada_wynagrodzenie"/>
+                <Variable IRI="#Z"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">6533300</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Stwierdzenie, czy zawodnik jest Rookie na podstawie liczby sezonów w lidze.</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Rookie</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Zawodnik"/>
+                <Variable IRI="#Z"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#pracuje_w_lidze_od"/>
+                <Variable IRI="#Z"/>
+                <Variable IRI="#x"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#x"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">0</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#posiada_doświadczenie"/>
+                <Variable IRI="#Z"/>
+                <NamedIndividual IRI="#Rookie"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Stwierdzenie, czy zawodnik jest Rookie na podstawie liczby sezonów w lidze.</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Sophomore</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Zawodnik"/>
+                <Variable IRI="#Z"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#pracuje_w_lidze_od"/>
+                <Variable IRI="#Z"/>
+                <Variable IRI="#x"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#equal">
+                <Variable IRI="#x"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#posiada_doświadczenie"/>
+                <Variable IRI="#Z"/>
+                <NamedIndividual IRI="#Sophomore"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Stwierdzenie, czy zawodnik jest Rookie na podstawie liczby sezonów w lidze.</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Veteran</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Zawodnik"/>
+                <Variable IRI="#Z"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#pracuje_w_lidze_od"/>
+                <Variable IRI="#Z"/>
+                <Variable IRI="#x"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThan">
+                <Variable IRI="#x"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#posiada_doświadczenie"/>
+                <Variable IRI="#Z"/>
+                <NamedIndividual IRI="#Veteran"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
