@@ -20,13 +20,13 @@
         <Class IRI="#Asystent_trenera"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Członek_kadry_szkoleniowej"/>
+        <Class IRI="#Czlonek_kadry_szkoleniowej"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Członek_zespołu"/>
+        <Class IRI="#Czlonek_zespolu"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Doświadczenie"/>
+        <Class IRI="#Doswiadczenie"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Konferencja"/>
@@ -47,7 +47,7 @@
         <Class IRI="#Zawodnik"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#gra_na_pozycji"/>
@@ -56,7 +56,7 @@
         <ObjectProperty IRI="#posiada_agenta"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#posiada_doświadczenie"/>
+        <ObjectProperty IRI="#posiada_doswiadczenie"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#posiada_pracownika"/>
@@ -74,10 +74,10 @@
         <ObjectProperty IRI="#reprezentuje_zawodnika"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#zdobył_nagrodę"/>
+        <ObjectProperty IRI="#zdobyl_nagrode"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#znajduje_się_w_konferencji"/>
+        <ObjectProperty IRI="#znajduje_sie_w_konferencji"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#gra_z_numerem"/>
@@ -362,21 +362,21 @@
         </ObjectIntersectionOf>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Członek_zespołu"/>
+        <Class IRI="#Czlonek_zespolu"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#pracuje_dla"/>
-            <Class IRI="#Zespół"/>
+            <Class IRI="#Zespol"/>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Członek_zespołu"/>
+        <Class IRI="#Czlonek_zespolu"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#zdobył_nagrodę"/>
+            <ObjectProperty IRI="#zdobyl_nagrode"/>
             <Class IRI="#Nagroda"/>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Członek_zespołu"/>
+        <Class IRI="#Czlonek_zespolu"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#posiada_wynagrodzenie"/>
             <DatatypeRestriction>
@@ -388,7 +388,7 @@
         </DataSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Członek_zespołu"/>
+        <Class IRI="#Czlonek_zespolu"/>
         <DataSomeValuesFrom>
             <DataProperty IRI="#pracuje_w_lidze_od"/>
             <DatatypeRestriction>
@@ -400,7 +400,7 @@
         </DataSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Doświadczenie"/>
+        <Class IRI="#Doswiadczenie"/>
         <ObjectOneOf>
             <NamedIndividual IRI="#Rookie"/>
             <NamedIndividual IRI="#Sophomore"/>
@@ -417,7 +417,7 @@
     <EquivalentClasses>
         <Class IRI="#Miasto"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#znajduje_się_w_konferencji"/>
+            <ObjectProperty IRI="#znajduje_sie_w_konferencji"/>
             <Class IRI="#Konferencja"/>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
@@ -458,8 +458,8 @@
     <EquivalentClasses>
         <Class IRI="#Zawodnik"/>
         <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#posiada_doświadczenie"/>
-            <Class IRI="#Doświadczenie"/>
+            <ObjectProperty IRI="#posiada_doswiadczenie"/>
+            <Class IRI="#Doswiadczenie"/>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -475,14 +475,14 @@
         </DataSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#posiada_pracownika"/>
-            <Class IRI="#Członek_zespołu"/>
+            <Class IRI="#Czlonek_zespolu"/>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <ObjectExactCardinality cardinality="1">
             <ObjectProperty IRI="#reprezentuje_miasto"/>
             <Class IRI="#Miasto"/>
@@ -490,19 +490,19 @@
     </EquivalentClasses>
     <SubClassOf>
         <Class IRI="#Asystent_trenera"/>
-        <Class IRI="#Członek_kadry_szkoleniowej"/>
+        <Class IRI="#Czlonek_kadry_szkoleniowej"/>
     </SubClassOf>
     <SubClassOf>
-        <Class IRI="#Członek_kadry_szkoleniowej"/>
-        <Class IRI="#Członek_zespołu"/>
+        <Class IRI="#Czlonek_kadry_szkoleniowej"/>
+        <Class IRI="#Czlonek_zespolu"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Trener"/>
-        <Class IRI="#Członek_kadry_szkoleniowej"/>
+        <Class IRI="#Czlonek_kadry_szkoleniowej"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Zawodnik"/>
-        <Class IRI="#Członek_zespołu"/>
+        <Class IRI="#Czlonek_zespolu"/>
     </SubClassOf>
     <ClassAssertion>
         <Class IRI="#Zawodnik"/>
@@ -513,7 +513,7 @@
         <NamedIndividual IRI="#Atlanta"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Atlanta_Hawks"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -521,11 +521,11 @@
         <NamedIndividual IRI="#Boston"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Boston_Celtics"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Brooklyn_Nets"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -537,7 +537,7 @@
         <NamedIndividual IRI="#Charlotte"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Charlotte_Hornets"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -545,7 +545,7 @@
         <NamedIndividual IRI="#Chicago"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Chicago_Bulls"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -553,7 +553,7 @@
         <NamedIndividual IRI="#Cleveland"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Cleveland_Cavaliers"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -565,7 +565,7 @@
         <NamedIndividual IRI="#Dallas"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Dallas_Mavericks"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -577,7 +577,7 @@
         <NamedIndividual IRI="#Denver"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Denver_Nuggets"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -585,7 +585,7 @@
         <NamedIndividual IRI="#Detroit"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Detroit_Pistons"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -593,7 +593,7 @@
         <NamedIndividual IRI="#Forward"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Golden_State_Warriors"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -605,7 +605,7 @@
         <NamedIndividual IRI="#Houston"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Houston_Rockets"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -613,7 +613,7 @@
         <NamedIndividual IRI="#Indiana"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Indiana_Pacers"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -641,11 +641,11 @@
         <NamedIndividual IRI="#Los_Angeles"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Los_Angeles_Clippers"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Los_Angeles_Lakers"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -653,7 +653,7 @@
         <NamedIndividual IRI="#Memphis"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Memphis_Grizzlies"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -661,7 +661,7 @@
         <NamedIndividual IRI="#Miami"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Miami_Heat"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -669,7 +669,7 @@
         <NamedIndividual IRI="#Milwaukee"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Milwaukee_Bucks"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -677,7 +677,7 @@
         <NamedIndividual IRI="#Minnesota"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Minnesota_Timberwolves"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -693,7 +693,7 @@
         <NamedIndividual IRI="#New_Orleans"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#New_Orleans_Pelicans"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -701,7 +701,7 @@
         <NamedIndividual IRI="#New_York"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#New_York_Knicks"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -709,7 +709,7 @@
         <NamedIndividual IRI="#Oklahoma_City"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Oklahoma_City_Thunder"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -717,7 +717,7 @@
         <NamedIndividual IRI="#Orlando"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Orlando_Magic"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -729,7 +729,7 @@
         <NamedIndividual IRI="#Philadelphia"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Philadelphia_76ers"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -737,7 +737,7 @@
         <NamedIndividual IRI="#Phoenix"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Phoenix_Suns"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -745,7 +745,7 @@
         <NamedIndividual IRI="#Portland"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Portland_Trail_Blazers"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -753,7 +753,7 @@
         <NamedIndividual IRI="#Rob_Pelinka"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Doświadczenie"/>
+        <Class IRI="#Doswiadczenie"/>
         <NamedIndividual IRI="#Rookie"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -765,7 +765,7 @@
         <NamedIndividual IRI="#Sacramento"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Sacramento_Kings"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -773,7 +773,7 @@
         <NamedIndividual IRI="#San_Antonio"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#San_Antonio_Spurs"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -789,7 +789,7 @@
         <NamedIndividual IRI="#Sixth_Man_of_the_Year"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Doświadczenie"/>
+        <Class IRI="#Doswiadczenie"/>
         <NamedIndividual IRI="#Sophomore"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -797,7 +797,7 @@
         <NamedIndividual IRI="#Toronto"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Toronto_Raptors"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -809,11 +809,11 @@
         <NamedIndividual IRI="#Utah"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Utah_Jazz"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Doświadczenie"/>
+        <Class IRI="#Doswiadczenie"/>
         <NamedIndividual IRI="#Veteran"/>
     </ClassAssertion>
     <ClassAssertion>
@@ -821,7 +821,7 @@
         <NamedIndividual IRI="#Washington"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Zespół"/>
+        <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Washington_Wizards"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
@@ -835,7 +835,7 @@
         <NamedIndividual IRI="#Minnesota_Timberwolves"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#znajduje_się_w_konferencji"/>
+        <ObjectProperty IRI="#znajduje_sie_w_konferencji"/>
         <NamedIndividual IRI="#Klutch_Sports_Group"/>
         <NamedIndividual IRI="#Konferencja_zachodnia"/>
     </ObjectPropertyAssertion>
@@ -855,7 +855,7 @@
         <NamedIndividual IRI="#Los_Angeles_Lakers"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#znajduje_się_w_konferencji"/>
+        <ObjectProperty IRI="#znajduje_sie_w_konferencji"/>
         <NamedIndividual IRI="#Los_Angeles"/>
         <NamedIndividual IRI="#Konferencja_zachodnia"/>
     </ObjectPropertyAssertion>
@@ -933,7 +933,7 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#posiada_doświadczenie"/>
+        <ObjectProperty IRI="#posiada_doswiadczenie"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -957,7 +957,7 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
-        <ObjectProperty IRI="#znajduje_się_w_konferencji"/>
+        <ObjectProperty IRI="#znajduje_sie_w_konferencji"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <InverseObjectProperties>
@@ -1032,11 +1032,11 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Nazwa miasta na podstawie nazwy zespołu</Literal>
+            <Literal>Nazwa miasta na podstawie nazwy zespolu</Literal>
         </Annotation>
         <Body>
             <ClassAtom>
-                <Class IRI="#Zespół"/>
+                <Class IRI="#Zespol"/>
                 <Variable IRI="#Z"/>
             </ClassAtom>
             <ClassAtom>
@@ -1198,7 +1198,7 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>Stwierdzenie, czy zawodnik jest Rookie na podstawie liczby sezonów w lidze.</Literal>
+            <Literal>Stwierdzenie, czy zawodnik jest Rookie na podstawie liczby sezonow w lidze.</Literal>
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1221,7 +1221,7 @@
         </Body>
         <Head>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#posiada_doświadczenie"/>
+                <ObjectProperty IRI="#posiada_doswiadczenie"/>
                 <Variable IRI="#Z"/>
                 <NamedIndividual IRI="#Rookie"/>
             </ObjectPropertyAtom>
@@ -1234,7 +1234,7 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>Stwierdzenie, czy zawodnik jest Rookie na podstawie liczby sezonów w lidze.</Literal>
+            <Literal>Stwierdzenie, czy zawodnik jest Rookie na podstawie liczby sezonow w lidze.</Literal>
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1257,7 +1257,7 @@
         </Body>
         <Head>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#posiada_doświadczenie"/>
+                <ObjectProperty IRI="#posiada_doswiadczenie"/>
                 <Variable IRI="#Z"/>
                 <NamedIndividual IRI="#Sophomore"/>
             </ObjectPropertyAtom>
@@ -1270,7 +1270,7 @@
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>Stwierdzenie, czy zawodnik jest Rookie na podstawie liczby sezonów w lidze.</Literal>
+            <Literal>Stwierdzenie, czy zawodnik jest Rookie na podstawie liczby sezonow w lidze.</Literal>
         </Annotation>
         <Annotation>
             <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -1293,7 +1293,7 @@
         </Body>
         <Head>
             <ObjectPropertyAtom>
-                <ObjectProperty IRI="#posiada_doświadczenie"/>
+                <ObjectProperty IRI="#posiada_doswiadczenie"/>
                 <Variable IRI="#Z"/>
                 <NamedIndividual IRI="#Veteran"/>
             </ObjectPropertyAtom>
