@@ -70,10 +70,19 @@ def find_species():
                              posiada_ceche='*' if not cechy else cechy)
         print(result)
 
-        flash(f"Wiadomość!", 'alert alert-success')
+        flash(f"Znaleziono!", 'alert alert-success')
         return redirect(request.url)
     return render_template('find_species.html', title='Znajdź gatunek', features=get_features())
 
+
+@app.route('/add_species', methods=['GET', 'POST'])
+def add_species():
+    if request.method == 'POST':
+        if len(request.form) == 0:
+            flash(f"Nie podano cech!", 'alert alert-danger')
+            return redirect(request.url)
+    #flash(f"Dodano!", 'alert alert-success')
+    return render_template('add_species.html', title='Dodaj gatunek')
 
 if __name__ == '__main__':
     app.run(port=Config.flask_port)
