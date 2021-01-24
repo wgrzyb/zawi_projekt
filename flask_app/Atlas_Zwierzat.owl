@@ -16,9 +16,6 @@
         <Class IRI="#Cecha"/>
     </Declaration>
     <Declaration>
-        <Class IRI="#Umiejetnosc"/>
-    </Declaration>
-    <Declaration>
         <Class IRI="#Gatunek"/>
     </Declaration>
     <Declaration>
@@ -34,13 +31,13 @@
         <Class IRI="#Rodzaj"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Rodzina"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Sposob_odzywiania"/>
     </Declaration>
     <Declaration>
-        <ObjectProperty IRI="#posiada_ceche"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="#posiada_umiejetnosc"/>
+        <Class IRI="#Umiejetnosc"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#ma_sposob_odzywiania"/>
@@ -50,6 +47,15 @@
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#nalezy_do_rodzaju"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#nalezy_do_rodziny"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#posiada_ceche"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#posiada_umiejetnosc"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#wystepuje_na_obszarze"/>
@@ -64,49 +70,16 @@
         <DataProperty IRI="#posiada_mase_ciala"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Ameryka_Poludniowa"/>
+        <NamedIndividual IRI="#Afryka"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Ameryka_Polnocna"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Ameryka_Poludniowa"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Ameryka_srodkowa"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Latanie"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Miesozernosc"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Ogon"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Pletwy"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Plywanie"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Roslinozernosc"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Skrzydla"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Traba"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Wszystkozernosc"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Wymarle"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Zagrozone"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Afryka"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Aquila"/>
@@ -127,10 +100,22 @@
         <NamedIndividual IRI="#Krazkoplawy"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Latanie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Lew_afrykanski"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Loxodonta"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Miesozernosc"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Morza"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Mysiokrólik_zwyczajny"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Najmniejszej_troski"/>
@@ -140,6 +125,9 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Oceany"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ogon"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Orzel_przedni"/>
@@ -154,37 +142,53 @@
         <NamedIndividual IRI="#Paprotniki"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Ptaki"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Plazy"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Ssaki"/>
+        <NamedIndividual IRI="#Pletwy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Plywanie"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Ptaki"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Regulus"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Roslinozernosc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Skrzydla"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Slon_afrykanski"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Ssaki"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Traba"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Watrobowce"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wszystkozernosc"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Wymarle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Zagrozone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#kotowate"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
     </Declaration>
-    <EquivalentClasses>
-        <Class IRI="#Gatunek"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#posiada_ceche"/>
-            <Class IRI="#Cecha"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
-    <EquivalentClasses>
-        <Class IRI="#Gatunek"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="#posiada_umiejetnosc"/>
-            <Class IRI="#Umiejetnosc"/>
-        </ObjectSomeValuesFrom>
-    </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Gatunek"/>
         <ObjectSomeValuesFrom>
@@ -197,6 +201,20 @@
         <ObjectSomeValuesFrom>
             <ObjectProperty IRI="#nalezy_do_rodzaju"/>
             <Class IRI="#Rodzaj"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gatunek"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#posiada_ceche"/>
+            <Class IRI="#Cecha"/>
+        </ObjectSomeValuesFrom>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Gatunek"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#posiada_umiejetnosc"/>
+            <Class IRI="#Umiejetnosc"/>
         </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
@@ -229,7 +247,7 @@
     </EquivalentClasses>
     <ClassAssertion>
         <Class IRI="#Obszar"/>
-        <NamedIndividual IRI="#Ameryka_Poludniowa"/>
+        <NamedIndividual IRI="#Afryka"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Obszar"/>
@@ -237,55 +255,11 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Obszar"/>
-        <NamedIndividual IRI="#Ameryka_srodkowa"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Umiejetnosc"/>
-        <NamedIndividual IRI="#Latanie"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sposob_odzywiania"/>
-        <NamedIndividual IRI="#Miesozernosc"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Cecha"/>
-        <NamedIndividual IRI="#Ogon"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Cecha"/>
-        <NamedIndividual IRI="#Pletwy"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Umiejetnosc"/>
-        <NamedIndividual IRI="#Plywanie"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sposob_odzywiania"/>
-        <NamedIndividual IRI="#Roslinozernosc"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Cecha"/>
-        <NamedIndividual IRI="#Skrzydla"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Cecha"/>
-        <NamedIndividual IRI="#Traba"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Sposob_odzywiania"/>
-        <NamedIndividual IRI="#Wszystkozernosc"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
-        <NamedIndividual IRI="#Wymarle"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
-        <NamedIndividual IRI="#Zagrozone"/>
+        <NamedIndividual IRI="#Ameryka_Poludniowa"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Obszar"/>
-        <NamedIndividual IRI="#Afryka"/>
+        <NamedIndividual IRI="#Ameryka_srodkowa"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Rodzaj"/>
@@ -312,12 +286,28 @@
         <NamedIndividual IRI="#Krazkoplawy"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Umiejetnosc"/>
+        <NamedIndividual IRI="#Latanie"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gatunek"/>
+        <NamedIndividual IRI="#Lew_afrykanski"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Rodzaj"/>
         <NamedIndividual IRI="#Loxodonta"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Sposob_odzywiania"/>
+        <NamedIndividual IRI="#Miesozernosc"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Obszar"/>
         <NamedIndividual IRI="#Morza"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gatunek"/>
+        <NamedIndividual IRI="#Mysiokrólik_zwyczajny"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
@@ -330,6 +320,10 @@
     <ClassAssertion>
         <Class IRI="#Obszar"/>
         <NamedIndividual IRI="#Oceany"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cecha"/>
+        <NamedIndividual IRI="#Ogon"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Gatunek"/>
@@ -349,15 +343,31 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Gromada"/>
-        <NamedIndividual IRI="#Ptaki"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Gromada"/>
         <NamedIndividual IRI="#Plazy"/>
     </ClassAssertion>
     <ClassAssertion>
+        <Class IRI="#Cecha"/>
+        <NamedIndividual IRI="#Pletwy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Umiejetnosc"/>
+        <NamedIndividual IRI="#Plywanie"/>
+    </ClassAssertion>
+    <ClassAssertion>
         <Class IRI="#Gromada"/>
-        <NamedIndividual IRI="#Ssaki"/>
+        <NamedIndividual IRI="#Ptaki"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rodzaj"/>
+        <NamedIndividual IRI="#Regulus"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sposob_odzywiania"/>
+        <NamedIndividual IRI="#Roslinozernosc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cecha"/>
+        <NamedIndividual IRI="#Skrzydla"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Gatunek"/>
@@ -365,7 +375,31 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Gromada"/>
+        <NamedIndividual IRI="#Ssaki"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Cecha"/>
+        <NamedIndividual IRI="#Traba"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gromada"/>
         <NamedIndividual IRI="#Watrobowce"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Sposob_odzywiania"/>
+        <NamedIndividual IRI="#Wszystkozernosc"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
+        <NamedIndividual IRI="#Wymarle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
+        <NamedIndividual IRI="#Zagrozone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Rodzina"/>
+        <NamedIndividual IRI="#kotowate"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#nalezy_do_gromady"/>
@@ -373,9 +407,29 @@
         <NamedIndividual IRI="#Ptaki"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nalezy_do_rodziny"/>
+        <NamedIndividual IRI="#Lew_afrykanski"/>
+        <NamedIndividual IRI="#kotowate"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#wystepuje_na_obszarze"/>
+        <NamedIndividual IRI="#Lew_afrykanski"/>
+        <NamedIndividual IRI="#Afryka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nalezy_do_rodzaju"/>
+        <NamedIndividual IRI="#Mysiokrólik_zwyczajny"/>
+        <NamedIndividual IRI="#Regulus"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#posiada_umiejetnosc"/>
-        <NamedIndividual IRI="#Orzel_przedni"/>
+        <NamedIndividual IRI="#Mysiokrólik_zwyczajny"/>
         <NamedIndividual IRI="#Latanie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#wystepuje_na_obszarze"/>
+        <NamedIndividual IRI="#Mysiokrólik_zwyczajny"/>
+        <NamedIndividual IRI="#Europa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#nalezy_do_rodzaju"/>
@@ -383,23 +437,40 @@
         <NamedIndividual IRI="#Aquila"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#posiada_ceche"/>
-        <NamedIndividual IRI="#Slon_afrykanski"/>
-        <NamedIndividual IRI="#Traba"/>
+        <ObjectProperty IRI="#posiada_umiejetnosc"/>
+        <NamedIndividual IRI="#Orzel_przedni"/>
+        <NamedIndividual IRI="#Latanie"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#wystepuje_na_obszarze"/>
+        <NamedIndividual IRI="#Orzel_przedni"/>
+        <NamedIndividual IRI="#Europa"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nalezy_do_gromady"/>
+        <NamedIndividual IRI="#Regulus"/>
+        <NamedIndividual IRI="#Ptaki"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#nalezy_do_rodzaju"/>
         <NamedIndividual IRI="#Slon_afrykanski"/>
         <NamedIndividual IRI="#Loxodonta"/>
     </ObjectPropertyAssertion>
-    <SubObjectPropertyOf>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#posiada_ceche"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
-    <SubObjectPropertyOf>
-        <ObjectProperty IRI="#posiada_umiejetnosc"/>
-        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
-    </SubObjectPropertyOf>
+        <NamedIndividual IRI="#Slon_afrykanski"/>
+        <NamedIndividual IRI="#Traba"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#wystepuje_na_obszarze"/>
+        <NamedIndividual IRI="#Slon_afrykanski"/>
+        <NamedIndividual IRI="#Afryka"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#nalezy_do_rodziny"/>
+        <NamedIndividual IRI="#kotowate"/>
+        <NamedIndividual IRI="#kotowate"/>
+    </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#ma_sposob_odzywiania"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
@@ -410,6 +481,18 @@
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#nalezy_do_rodzaju"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#nalezy_do_rodziny"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#posiada_ceche"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty IRI="#posiada_umiejetnosc"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
@@ -436,6 +519,38 @@
         <DataProperty IRI="#posiada_mase_ciala"/>
         <Datatype abbreviatedIRI="xsd:int"/>
     </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Gatunek"/>
+                <Variable IRI="#G"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#nalezy_do_rodziny"/>
+                <Variable IRI="#G"/>
+                <NamedIndividual IRI="#kotowate"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <DataPropertyAtom>
+                <DataProperty IRI="#posiada_liczbe_odnozy"/>
+                <Variable IRI="#G"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+            </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
     <DLSafeRule>
         <Annotation>
             <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
@@ -475,6 +590,43 @@
                 <Variable IRI="#G"/>
                 <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2</Literal>
             </DataPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal></Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>Trabowce sa ssakami</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Gatunek"/>
+                <Variable IRI="#G"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#nalezy_do_rodzaju"/>
+                <Variable IRI="#G"/>
+                <Variable IRI="#R"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#posiada_ceche"/>
+                <Variable IRI="#G"/>
+                <NamedIndividual IRI="#Traba"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#nalezy_do_gromady"/>
+                <Variable IRI="#R"/>
+                <NamedIndividual IRI="#Ssaki"/>
+            </ObjectPropertyAtom>
         </Head>
     </DLSafeRule>
     <DLSafeRule>
@@ -539,43 +691,6 @@
                 <Variable IRI="#G"/>
                 <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
             </DataPropertyAtom>
-        </Head>
-    </DLSafeRule>
-    <DLSafeRule>
-        <Annotation>
-            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
-            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal></Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Trabowce sa ssakami</Literal>
-        </Annotation>
-        <Body>
-            <ClassAtom>
-                <Class IRI="#Gatunek"/>
-                <Variable IRI="#G"/>
-            </ClassAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#nalezy_do_rodzaju"/>
-                <Variable IRI="#G"/>
-                <Variable IRI="#R"/>
-            </ObjectPropertyAtom>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#posiada_ceche"/>
-                <Variable IRI="#G"/>
-                <NamedIndividual IRI="#Traba"/>
-            </ObjectPropertyAtom>
-        </Body>
-        <Head>
-            <ObjectPropertyAtom>
-                <ObjectProperty IRI="#nalezy_do_gromady"/>
-                <Variable IRI="#R"/>
-                <NamedIndividual IRI="#Ssaki"/>
-            </ObjectPropertyAtom>
         </Head>
     </DLSafeRule>
     <DLSafeRule>
