@@ -40,15 +40,29 @@ def reason(onto):
 
 onto = reason(onto)
 
+
+gatunek = 'Sarna'
+gromada = 'Gromada'
+rodzina = 'Rodzina'
+obszar = 'Europa'
+
+if onto['Lew_afrykanski']:
+    print(onto[''])
+
+onto_obszar = onto.Obszar(obszar)
+sarna = onto.Gatunek(gatunek, wystepuje_na_obszarze=[onto[obszar]])
+
+
+
 # result.append(onto.search(posiada_liczbe_odnozy=4))
 # result.append(onto.search(posiada_ceche='*'))
-obszar = 'Afryka'
-obszar = 'all'
-result=onto.search(posiada_ceche=[onto['Skrzydla']])
-animals = set()
-
-
-print(result)
+# obszar = 'Afryka'
+# obszar = 'all'
+# result=onto.search(wystepuje_na_obszarze=[onto['Las']])
+# animals = set()
+#
+#
+# print(result)
 
 
 

@@ -90,7 +90,15 @@ def add_species():
         if len(request.form) == 0:
             flash(f"Nie podano cech!", 'alert alert-danger')
             return redirect(request.url)
-    #flash(f"Dodano!", 'alert alert-success')
+
+        gatunek = request.form['gatunek']
+        gromada = request.form['gromada']
+        rodzina = request.form['rodzina']
+        srodowisko = request.form['srodowisko']
+
+        flash(f"Indywiduum dodane do ontologii", 'alert alert-success')
+        return redirect(request.url)
+
     return render_template('add_species.html', title='Dodaj gatunek')
 
 

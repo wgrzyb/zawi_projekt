@@ -115,7 +115,7 @@
         <NamedIndividual IRI="#Morza"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Mysiokrólik_zwyczajny"/>
+        <NamedIndividual IRI="#Mysikrolik_zwyczajny"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Najmniejszej_troski"/>
@@ -307,7 +307,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Gatunek"/>
-        <NamedIndividual IRI="#Mysiokrólik_zwyczajny"/>
+        <NamedIndividual IRI="#Mysikrolik_zwyczajny"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Kategoria_zagrozenia_wyginieciem"/>
@@ -418,17 +418,17 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#nalezy_do_rodzaju"/>
-        <NamedIndividual IRI="#Mysiokrólik_zwyczajny"/>
+        <NamedIndividual IRI="#Mysikrolik_zwyczajny"/>
         <NamedIndividual IRI="#Regulus"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#posiada_umiejetnosc"/>
-        <NamedIndividual IRI="#Mysiokrólik_zwyczajny"/>
+        <NamedIndividual IRI="#Mysikrolik_zwyczajny"/>
         <NamedIndividual IRI="#Latanie"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#wystepuje_na_obszarze"/>
-        <NamedIndividual IRI="#Mysiokrólik_zwyczajny"/>
+        <NamedIndividual IRI="#Mysikrolik_zwyczajny"/>
         <NamedIndividual IRI="#Europa"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
