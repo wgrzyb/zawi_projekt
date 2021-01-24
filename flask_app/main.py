@@ -1,4 +1,6 @@
-from flask import Flask, render_template, request, flash
+import json
+
+from flask import Flask, render_template, request, flash, url_for, session
 from werkzeug.utils import redirect
 from owlready2 import *
 from flask_app.config import Config
@@ -17,6 +19,7 @@ def reason(onto):
         Imp().set_as_rule("Gatunek(?G) , nalezy_do_rodziny(?G, kotowate) -> posiada_liczbe_odnozy(?G, 4)")
         sync_reasoner_pellet(infer_data_property_values=True, infer_property_values=True)
     return onto
+
 
 @app.route('/')
 @app.route('/home')
@@ -68,11 +71,17 @@ def find_species():
         result = onto.search(posiada_liczbe_odnozy='*' if liczba_nog == 'all' else liczba_nog,
                              wystepuje_na_obszarze='*' if obszar == 'all' else onto[obszar],
                              posiada_ceche='*' if not cechy else cechy)
-        print(result)
 
-        flash(f"Znaleziono!", 'alert alert-success')
-        return redirect(request.url)
+        species = [species.get_name().replace("_", " ") for species in result]
+        return redirect(url_for('show_result', species=json.dumps(species)))
     return render_template('find_species.html', title='Znajdź gatunek', features=get_features())
+
+
+@app.route('/result', methods=['GET', 'POST'])
+def show_result():
+    species = json.loads(request.args['species'])
+    print(species)
+    return render_template('result.html', title='Wyniki', species=species)
 
 
 @app.route('/add_species', methods=['GET', 'POST'])
@@ -83,6 +92,7 @@ def add_species():
             return redirect(request.url)
     #flash(f"Dodano!", 'alert alert-success')
     return render_template('add_species.html', title='Dodaj gatunek')
+
 
 if __name__ == '__main__':
     app.run(port=Config.flask_port)
