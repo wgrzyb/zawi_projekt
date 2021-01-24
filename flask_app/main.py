@@ -87,16 +87,18 @@ def show_result():
 @app.route('/add_species', methods=['GET', 'POST'])
 def add_species():
     if request.method == 'POST':
-        if len(request.form) == 0:
-            flash(f"Nie podano cech!", 'alert alert-danger')
-            return redirect(request.url)
-
         gatunek = request.form['gatunek']
         gromada = request.form['gromada']
         rodzina = request.form['rodzina']
-        srodowisko = request.form['srodowisko']
+        obszar = request.form['obszar']
+        if any(map(str.isdigit, gatunek)) or any(map(str.isdigit, gromada)) or any(map(str.isdigit, rodzina)) or any(map(str.isdigit, obszar)):
+            flash(f"Pola nie mogą zawierać liczb!", 'alert alert-danger')
+            return redirect(request.url)
 
-        flash(f"Indywiduum dodane do ontologii", 'alert alert-success')
+        # if add_indywidual_ended_with_error:
+        #     flash(f"Indywiduum nie zostało dodane do ontologii! {e.stack}", 'alert alert-danger')
+        # else:
+        flash(f"Indywiduum dodane do ontologii!", 'alert alert-success')
         return redirect(request.url)
 
     return render_template('add_species.html', title='Dodaj gatunek')
