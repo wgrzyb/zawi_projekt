@@ -59,8 +59,9 @@
         feature_label.setAttribute("for", feature_input_id);
         switch (feature_input_type) {
             case "bool":
-                feature_input.setAttribute("type", "checkbox");
+                feature_input.setAttribute("type", "radio");
                 feature_input.setAttribute("class", "form-control-sm");
+                feature_input.checked = true;
                 break;
             case "int":
                 feature_input.required = true;
