@@ -1,3 +1,4 @@
+from owlready2 import *
 class Config:
     flask_port = 5000
     flask_static_url_path = '/flask_app'

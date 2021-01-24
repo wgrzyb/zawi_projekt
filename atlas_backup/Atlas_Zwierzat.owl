@@ -184,7 +184,7 @@
         <NamedIndividual IRI="#Zagrozone"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#kotowate"/>
+        <NamedIndividual IRI="#Kotowate"/>
     </Declaration>
     <Declaration>
         <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
@@ -399,7 +399,7 @@
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Rodzina"/>
-        <NamedIndividual IRI="#kotowate"/>
+        <NamedIndividual IRI="#Kotowate"/>
     </ClassAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#nalezy_do_gromady"/>
@@ -409,7 +409,7 @@
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#nalezy_do_rodziny"/>
         <NamedIndividual IRI="#Lew_afrykanski"/>
-        <NamedIndividual IRI="#kotowate"/>
+        <NamedIndividual IRI="#Kotowate"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#wystepuje_na_obszarze"/>
@@ -468,8 +468,8 @@
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#nalezy_do_rodziny"/>
-        <NamedIndividual IRI="#kotowate"/>
-        <NamedIndividual IRI="#kotowate"/>
+        <NamedIndividual IRI="#Kotowate"/>
+        <NamedIndividual IRI="#Kotowate"/>
     </ObjectPropertyAssertion>
     <SubObjectPropertyOf>
         <ObjectProperty IRI="#ma_sposob_odzywiania"/>
@@ -540,7 +540,7 @@
             <ObjectPropertyAtom>
                 <ObjectProperty IRI="#nalezy_do_rodziny"/>
                 <Variable IRI="#G"/>
-                <NamedIndividual IRI="#kotowate"/>
+                <NamedIndividual IRI="#Kotowate"/>
             </ObjectPropertyAtom>
         </Body>
         <Head>
