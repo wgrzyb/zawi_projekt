@@ -10,6 +10,20 @@ app = Flask(__name__, static_url_path=Config.flask_static_url_path)
 app.config.from_object('config.BaseConfig')
 
 
+def reason(onto):
+    with onto:
+        Imp().set_as_rule("Gatunek(?G), posiada_umiejetnosc(?G, Latanie) -> posiada_ceche(?G, Skrzydla)")
+        Imp().set_as_rule(
+            "Gatunek(?G) , Rodzaj(?R) , nalezy_do_rodzaju(?G, ?R) , nalezy_do_gromady(?R, Ptaki) -> posiada_liczbe_odnozy(?G, 2)")
+        Imp().set_as_rule("Gatunek(?G) , posiada_ceche(?G, Traba) -> posiada_liczbe_odnozy(?G, 4)")
+        Imp().set_as_rule("Gatunek(?G) , posiada_ceche(?G, Traba) -> ma_sposob_odzywiania(?G, Roslinozernosc)")
+        Imp().set_as_rule(
+            "Gatunek(?G) , nalezy_do_rodzaju(?G, ?R) , posiada_ceche(?G, Traba) -> nalezy_do_gromady(?R, Ssaki)")
+        Imp().set_as_rule("Gatunek(?G) , nalezy_do_rodziny(?G, Kotowate) -> posiada_liczbe_odnozy(?G, 4)")
+        sync_reasoner_pellet(infer_data_property_values=True, infer_property_values=True)
+    return onto
+
+
 @app.route('/')
 @app.route('/home')
 def home():
@@ -17,7 +31,7 @@ def home():
 
 
 def get_features():
-    features = {"srodowisko zycia": {"id": "wystepuje_na_obszarze",
+    features = {"Srodowisko zycia": {"id": "wystepuje_na_obszarze",
                                      "type": "select",
                                      "values": ["Afryka", "Ameryka Polnocna", "Ameryka Poludniowa", "Ameryka srodkowa",
                                                 "Australia", "Azja", "Europa", "Morza", "Oceany"]},
@@ -40,14 +54,15 @@ def find_species():
             flash(f"Nie podano cech!", 'alert alert-danger')
             return redirect(request.url)
 
-        # cechy:
+        # Cechy:
         # Gdy uzytkownik nie sprecyzuje pola - brane sa wszystkie rekordy z ontologii
-        liczba_nog = None
-        obszar = None
+
+        nogi = []
+        obszar = []
         cechy = []
 
         # onto warunki
-        onto1 = get_ontology("Atlas.owl").load()
+        onto = get_ontology("Atlas.owl").load()
 
         for feature in request.form:
             if feature == 'wystepuje_na_obszarze':
@@ -56,33 +71,24 @@ def find_species():
                 liczba_nog = int(request.form.get(feature))
             if feature == 'skrzydla':
                 if request.form.get(feature) == 'on':
-                    cechy.append(onto1['Skrzydla'])
+                    cechy.append(onto['Skrzydla'])
             if feature == 'traba':
                 if request.form.get(feature) == 'on':
-                    cechy.append(onto1['Traba'])
-        with onto1:
-            Imp().set_as_rule("Gatunek(?G), posiada_umiejetnosc(?G, Latanie) -> posiada_ceche(?G, Skrzydla)")
-            Imp().set_as_rule(
-                "Gatunek(?G) , Rodzaj(?R) , nalezy_do_rodzaju(?G, ?R) , nalezy_do_gromady(?R, Ptaki) -> posiada_liczbe_odnozy(?G, 2)")
-            Imp().set_as_rule("Gatunek(?G) , posiada_ceche(?G, Traba) -> posiada_liczbe_odnozy(?G, 4)")
-            Imp().set_as_rule("Gatunek(?G) , posiada_ceche(?G, Traba) -> ma_sposob_odzywiania(?G, Roslinozernosc)")
-            Imp().set_as_rule(
-                "Gatunek(?G) , nalezy_do_rodzaju(?G, ?R) , posiada_ceche(?G, Traba) -> nalezy_do_gromady(?R, Ssaki)")
-            Imp().set_as_rule("Gatunek(?G) , nalezy_do_rodziny(?G, Kotowate) -> posiada_liczbe_odnozy(?G, 4)")
-            sync_reasoner_pellet(infer_data_property_values=True, infer_property_values=True)
-            # result = {}
-            # result['nogi'] = onto1.search(posiada_liczbe_odnozy='*' if liczba_nog == 'all' else liczba_nog),
-            # result['obszar'] = onto1.search(wystepuje_na_obszarze='*' if obszar == 'all' else onto1[obszar]),
-            # result['cechy'] = onto1.search(posiada_ceche='*' if not cechy else onto1[cechy])
-            print(liczba_nog, obszar)
-            if not liczba_nog and not obszar:
-                result = onto1.search(is_a=onto1['Gatunek'], posiada_ceche=onto1[cechy])
-            # result = onto1.search(posiada_liczbe_odnozy='' if liczba_nog == 'all' else liczba_nog,
-            #                       wystepuje_na_obszarze='' if obszar == 'all' else onto1[obszar],
-            #                       posiada_ceche=onto1[cechy])
+                    cechy.append(onto['Traba'])
 
-            print(cechy)
+            # result = {}
+            # result['nogi'] = onto.search(posiada_liczbe_odnozy='*' if liczba_nog == 'all' else liczba_nog),
+            # result['obszar'] = onto.search(wystepuje_na_obszarze='*' if obszar == 'all' else onto[obszar]),
+            # result['cechy'] = onto.search(posiada_ceche='*' if not cechy else onto[cechy])
+            # print(liczba_nog, obszar)
+            # if not liczba_nog and not obszar:
+            onto = reason(onto)
+            result = onto.search(is_a=onto['Gatunek'], posiada_ceche=cechy)
             print(result)
+            # result = onto.search(posiada_liczbe_odnozy='' if liczba_nog == 'all' else liczba_nog,
+            #                       wystepuje_na_obszarze='' if obszar == 'all' else onto[obszar],
+            #                       posiada_ceche=onto[cechy])
+
         species = [species.get_name().replace("_", " ") for species in result]
         return redirect(url_for('show_result', species=json.dumps(species)))
     return render_template('find_species.html', title='Znajdz gatunek', features=get_features())
@@ -91,7 +97,6 @@ def find_species():
 @app.route('/result', methods=['GET', 'POST'])
 def show_result():
     species = json.loads(request.args['species'])
-    print(species)
     return render_template('result.html', title='Wyniki', species=species)
 
 
