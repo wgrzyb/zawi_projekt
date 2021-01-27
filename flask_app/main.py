@@ -8,7 +8,7 @@ from flask_app.config import Config
 
 app = Flask(__name__, static_url_path=Config.flask_static_url_path)
 app.config.from_object('config.BaseConfig')
-
+# owlready2.JAVA_EXE = r"D:\Program Files\JetBrains\PyCharm Projects\zawi_projekt\jdk-15.0.2\bin\java.exe"
 
 def reason(onto):
     with onto:
@@ -82,8 +82,11 @@ def find_species():
         # result['cechy'] = onto.search(posiada_ceche='*' if not cechy else onto[cechy])
         # print(liczba_nog, obszar)
         # if not liczba_nog and not obszar:
+
+        kwargs_dict = {"is_a" : onto['Gatunek'], "posiada_ceche": cechy}
+
         onto = reason(onto)
-        result = onto.search(is_a=onto['Gatunek'], posiada_ceche=cechy)
+        result = onto.search(**kwargs_dict)
         print(result)
         # result = onto.search(posiada_liczbe_odnozy='' if liczba_nog == 'all' else liczba_nog,
         #                       wystepuje_na_obszarze='' if obszar == 'all' else onto[obszar],
