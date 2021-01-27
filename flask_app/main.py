@@ -66,28 +66,28 @@ def find_species():
 
         for feature in request.form:
             if feature == 'wystepuje_na_obszarze':
-                obszar = request.form.get(feature)
+                obszar.append(request.form['wystepuje_na_obszarze'].replace(' ', '_'))
             if feature == 'posiada_liczbe_odnozy':
-                liczba_nog = int(request.form.get(feature))
+                nogi.append(request.form.get(int(request.form['posiada_liczbe_odnozy'])))
             if feature == 'skrzydla':
                 if request.form.get(feature) == 'on':
                     cechy.append(onto['Skrzydla'])
             if feature == 'traba':
                 if request.form.get(feature) == 'on':
                     cechy.append(onto['Traba'])
-
-            # result = {}
-            # result['nogi'] = onto.search(posiada_liczbe_odnozy='*' if liczba_nog == 'all' else liczba_nog),
-            # result['obszar'] = onto.search(wystepuje_na_obszarze='*' if obszar == 'all' else onto[obszar]),
-            # result['cechy'] = onto.search(posiada_ceche='*' if not cechy else onto[cechy])
-            # print(liczba_nog, obszar)
-            # if not liczba_nog and not obszar:
-            onto = reason(onto)
-            result = onto.search(is_a=onto['Gatunek'], posiada_ceche=cechy)
-            print(result)
-            # result = onto.search(posiada_liczbe_odnozy='' if liczba_nog == 'all' else liczba_nog,
-            #                       wystepuje_na_obszarze='' if obszar == 'all' else onto[obszar],
-            #                       posiada_ceche=onto[cechy])
+        print(obszar, nogi)
+        # result = {}
+        # result['nogi'] = onto.search(posiada_liczbe_odnozy='*' if liczba_nog == 'all' else liczba_nog),
+        # result['obszar'] = onto.search(wystepuje_na_obszarze='*' if obszar == 'all' else onto[obszar]),
+        # result['cechy'] = onto.search(posiada_ceche='*' if not cechy else onto[cechy])
+        # print(liczba_nog, obszar)
+        # if not liczba_nog and not obszar:
+        onto = reason(onto)
+        result = onto.search(is_a=onto['Gatunek'], posiada_ceche=cechy)
+        print(result)
+        # result = onto.search(posiada_liczbe_odnozy='' if liczba_nog == 'all' else liczba_nog,
+        #                       wystepuje_na_obszarze='' if obszar == 'all' else onto[obszar],
+        #                       posiada_ceche=onto[cechy])
 
         species = [species.get_name().replace("_", " ") for species in result]
         return redirect(url_for('show_result', species=json.dumps(species)))
