@@ -13,30 +13,28 @@
 
     <hr>
     <form method=post>
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label" for="gatunek">Gatunek</label>
-            <div class="col-sm-10">
-                <input id="gatunek" class="form-control" name="gatunek" required="" type="text">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label" for="gatunek">Gromada</label>
-            <div class="col-sm-10">
-                <input id="gromada" class="form-control" name="gromada" required="" type="text">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label" for="gatunek">Rodzina</label>
-            <div class="col-sm-10">
-                <input id="rodzina" class="form-control" name="rodzina" required="" type="text">
-            </div>
-        </div>
-        <div class="form-group row">
-            <label class="col-sm-2 col-form-label" for="gatunek">Obszar</label>
-            <div class="col-sm-10">
-                <input id="obszar" class="form-control" name="obszar" required="" type="text">
-            </div>
-        </div>
+        {% if form_fields %}
+            {% for field_name, field in form_fields.items() %}
+                <div class="form-group row">
+                    <label class="col-sm-4 col-form-label" for="{{ field['id'] }}">{% if field['required'] %}*{% endif %}{{ field_name }}</label>
+                    <div class="col-sm-8">
+                        {% if field["type"] == "select" %}
+                            <select id="{{ field['id'] }}" class="custom-select" name="{{ field['id'] }}" {% if field['required'] %} required="" {% endif %}>
+                                {% for option in field['values'] %}
+                                    <option value="{{ option }}">{{ option }}</option>
+                                {% endfor %}
+                            </select>
+                        {% elif field["type"] == "str" %}
+                            <input id="{{ field['id'] }}" class="form-control" name="{{ field['id'] }}" type="text" {% if field['required'] %} required="" {% endif %}>
+                        {% elif field["type"] == "int" %}
+                            <input id="{{ field['id'] }}" class="form-control" name="{{ field['id'] }}" type="number" {% if field['required'] %} required="" {% endif %}>
+                        {% elif field["type"] == "bool" %}
+                            <input id="{{ field['id'] }}" class=form-control-sm" name="{{ field['id'] }}" type="checkbox" {% if field['required'] %} required="" {% endif %}>
+                        {% endif %}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
         <input type=submit class="btn btn-primary" value="Dodaj gatunek">
     </form>
 </div>

@@ -51,33 +51,47 @@
         feature_label.setAttribute("class", "col-sm-3 col-form-label");
         feature_label.innerHTML = feature_name;
 
-        var feature_input = document.createElement("INPUT");
         feature_input_id = features[feature_name]["id"];
         feature_input_type = features[feature_name]["type"];
-        feature_input.setAttribute("id", feature_input_id);
-        feature_input.setAttribute("name", feature_input_id);
-        feature_label.setAttribute("for", feature_input_id);
-        switch (feature_input_type) {
-            case "bool":
-                feature_input.setAttribute("type", "radio");
-                feature_input.setAttribute("class", "form-control-sm");
-                feature_input.checked = true;
-                break;
-            case "int":
-                feature_input.required = true;
-                feature_input.setAttribute("type", "number");
-                feature_input.setAttribute("class", "form-control");
-                break;
-            case "str":
-                feature_input.required = true;
-                feature_input.setAttribute("type", "text");
-                feature_input.setAttribute("class", "form-control");
-                break;
-            default:
-                feature_input.required = true;
-                feature_input.setAttribute("type", "text");
-                feature_input.setAttribute("class", "form-control");
-                break;
+        if (feature_input_type == "select") {
+            var feature_input = document.createElement("SELECT");
+            feature_input.setAttribute("id", feature_input_id);
+            feature_input.setAttribute("name", feature_input_id);
+            feature_label.setAttribute("for", feature_input_id);
+            feature_input.setAttribute("class", "custom-select");
+            feature_input_options = features[feature_name]["values"];
+            for (option_name of feature_input_options) {
+                var option = document.createElement("option");
+                option.text = option_name;
+                feature_input.add(option);
+            }
+        } else {
+            var feature_input = document.createElement("INPUT");
+            feature_input.setAttribute("id", feature_input_id);
+            feature_input.setAttribute("name", feature_input_id);
+            feature_label.setAttribute("for", feature_input_id);
+            switch (feature_input_type) {
+                case "bool":
+                    feature_input.setAttribute("type", "radio");
+                    feature_input.setAttribute("class", "form-control-sm");
+                    feature_input.checked = true;
+                    break;
+                case "int":
+                    feature_input.required = true;
+                    feature_input.setAttribute("type", "number");
+                    feature_input.setAttribute("class", "form-control");
+                    break;
+                case "str":
+                    feature_input.required = true;
+                    feature_input.setAttribute("type", "text");
+                    feature_input.setAttribute("class", "form-control");
+                    break;
+                default:
+                    feature_input.required = true;
+                    feature_input.setAttribute("type", "text");
+                    feature_input.setAttribute("class", "form-control");
+                    break;
+            }
         }
 
         var feature_input_div = document.createElement("DIV");

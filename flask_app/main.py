@@ -32,7 +32,10 @@ def home():
 
 def get_features():
     features = {"Środowisko życia": {"id": "wystepuje_na_obszarze",
-                                     "type": "str"},
+                                     "type": "select",
+                                     "values": ["Afryka", "Ameryka Północna", "Ameryka Południowa", "Ameryka Środkowa", "Australia", "Azja", "Europa", "Morza", "Oceany"]},
+                "Rodzaj": {"id": "rodzaj",
+                           "type": "str"},
                 "Liczba nóg": {"id": "posiada_liczbe_odnozy",
                                "type": "int"},
                 "Czy posiada skrzydła?": {"id": "skrzydla",
@@ -98,9 +101,64 @@ def show_result():
     return render_template('result.html', title='Wyniki', species=species)
 
 
+def get_form_fields():
+    features = {"Gatunek": {"id": "gatunek",
+                            "type": "str",
+                            "required": True},
+                "Gromada": {"id": "gromada",
+                            "type": "select",
+                            "values": ["Gady", "Krążkopławy", "Owady", "Pajęczaki", "Paprotniki", "Płazy", "Ptaki", "Ssaki", "Watrobowce"],
+                            "required": True},
+                "Rodzaj": {"id": "rodzaj",
+                           "type": "str",
+                           "required": True},
+                "Rodzina": {"id": "rodzina",
+                            "type": "str",
+                            "required": True},
+                "Obszar": {"id": "obszar",
+                           "type": "select",
+                           "values": ["Afryka", "Ameryka Północna", "Ameryka Południowa", "Ameryka Środkowa", "Australia", "Azja", "Europa", "Morza", "Oceany"],
+                           "required": True},
+                "Sposób odżywiania": {"id": "sposob_odzywiania",
+                                      "type": "select",
+                                      "values": ["Mięsożerność", "Roślinożerność", "Wszystkożerność"],
+                                      "required": True},
+                "Kategoria zagrożenia wyginięciem": {"id": "kategoria_zagrozenia",
+                                                     "type": "select",
+                                                     "values": ["Najmniejszej troski", "Nierozpoznane", "Wymarłe", "Zagrożone"],
+                                                     "required": True},
+                "Posiada ogon?": {"id": "czy_ogon",
+                                  "type": "bool",
+                                  "required": False},
+                "Posiada płetwy?": {"id": "czy_pletwy",
+                                  "type": "bool",
+                                  "required": False},
+                "Posiada skrzydła?": {"id": "czy_skrzydla",
+                                  "type": "bool",
+                                  "required": False},
+                "Posiada trąbę?": {"id": "czy_traba",
+                                  "type": "bool",
+                                  "required": False},
+                "Umie latać?": {"id": "czy_lata",
+                                  "type": "bool",
+                                  "required": False},
+                "Umie pływać?": {"id": "czy_plywa",
+                                  "type": "bool",
+                                  "required": False},
+                "Liczba odnóży": {"id": "ile_odnozy",
+                                  "type": "int",
+                                  "required": False},
+                "Masa ciała": {"id": "masa_ciala",
+                               "type": "int",
+                               "required": False}
+                }
+    return features
+
+
 @app.route('/add_species', methods=['GET', 'POST'])
 def add_species():
     if request.method == 'POST':
+        print(request.form)  # Wypisanie parametrów z formularza
         gatunek = request.form['gatunek'].replace(' ', '_')
         gromada = request.form['gromada'].replace(' ', '_')
         rodzina = request.form['rodzina'].replace(' ', '_')
@@ -132,7 +190,7 @@ def add_species():
             flash(f"Indywiduum nie zostało dodane do ontologii! Gatunek już istnieje!", 'alert alert-danger')
         sleep(1)
         return redirect(request.url)
-    return render_template('add_species.html', title='Dodaj gatunek')
+    return render_template('add_species.html', title='Dodaj gatunek', form_fields=get_form_fields())
 
 
 if __name__ == '__main__':
