@@ -334,6 +334,27 @@
   <posiada_liczbe_odnozy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</posiada_liczbe_odnozy>
 </Gatunek>
 
+<Gatunek rdf:about="#Czarna_pantera">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Rodzaj"/>
+  <nalezy_do_gromady rdf:resource="#Ssaki"/>
+  <nalezy_do_rodziny rdf:resource="#Kotowate"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <posiada_liczbe_odnozy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</posiada_liczbe_odnozy>
+</Gatunek>
+
+<Gromada rdf:about="#Koty">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Gromada>
+
+<Gatunek rdf:about="#EloKot">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nalezy_do_gromady rdf:resource="#Koty"/>
+  <nalezy_do_rodziny rdf:resource="#Kotowate"/>
+  <wystepuje_na_obszarze rdf:resource="#Europa"/>
+  <posiada_liczbe_odnozy rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4.0</posiada_liczbe_odnozy>
+</Gatunek>
+
 <Gatunek rdf:about="#Kot_zwyczajny">
   <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
   <nalezy_do_gromady rdf:resource="#Ssaki"/>
@@ -378,6 +399,914 @@
   <wystepuje_na_obszarze rdf:resource="#Ameryka_Środkowa"/>
 </Gatunek>
 
+<Rodzina rdf:about="#Iguana">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Obszar rdf:about="#Ameryka_Południowa">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Obszar>
+
+<Gatunek rdf:about="#Legwan_Zielony">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#Iguana"/>
+  <wystepuje_na_obszarze rdf:resource="#Ameryka_Południowa"/>
+</Gatunek>
+
+<Rodzina rdf:about="#cccc">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Rodzaj rdf:about="#fdsfs">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Gatunek rdf:about="#dsadasdasd">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+</Gatunek>
+
+<Rodzina rdf:about="#dasda">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Rodzaj rdf:about="#dasd">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Gatunek rdf:about="#gfsdfsdf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+</Gatunek>
+
+<Rodzina rdf:about="#xzczxcz">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Rodzaj rdf:about="#dasdas">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Gatunek rdf:about="#czxcdz">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Roslinozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#xzczxcz"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+</Gatunek>
+
+<Rodzina rdf:about="#rwerw">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Gatunek rdf:about="#eewrwer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#rwerw"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+</Gatunek>
+
+<Rodzaj rdf:about="#sdasd">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Gatunek rdf:about="#dsdasd">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#dasda"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Gatunek>
+
+<Rodzina rdf:about="#fasfa">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Rodzaj rdf:about="#fsafa">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Gatunek rdf:about="#dafas">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#fasfa"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Gatunek>
+
+<Rodzina rdf:about="#dasdada">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Gatunek rdf:about="#jjjjjjjjjjjjjj">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#dasdada"/>
+  <posiada_ceche rdf:resource="#Ogon"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Gatunek>
+
+<Rodzina rdf:about="#gdfgdg">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Rodzaj rdf:about="#gfdgdf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Gatunek rdf:about="#ppppp">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#gdfgdg"/>
+  <posiada_ceche rdf:resource="#Ogon"/>
+  <posiada_ceche rdf:resource="#Traba"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Gatunek>
+
+<Rodzina rdf:about="#fasdfasf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Rodzaj rdf:about="#fsdaf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Gatunek rdf:about="#fsdafs">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#fasdfasf"/>
+  <posiada_ceche rdf:resource="#Ogon"/>
+  <posiada_ceche rdf:resource="#Pletwy"/>
+  <posiada_umiejetnosc rdf:resource="#Latanie"/>
+  <posiada_umiejetnosc rdf:resource="#Plywanie"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Gatunek>
+
+<Rodzina rdf:about="#DASD">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Rodzaj rdf:about="#sadAD">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Gatunek rdf:about="#dsfasdffsdaf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#DASD"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Gatunek>
+
+<Rodzina rdf:about="#fsdf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Gatunek"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#fsdf"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Rodzina>
+
+<Rodzaj rdf:about="#aaaa">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Gatunek rdf:about="#lollol">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#aaa"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Gatunek>
+
+<Rodzina rdf:about="#aaa">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Rodzaj rdf:about="#bbbb">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Rodzaj rdf:about="#fasdfsd">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Gatunek rdf:about="#fdsfas">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#fsdaf"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Gatunek>
+
+<Rodzina rdf:about="#fsadfasd">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Gatunek rdf:about="#fdsfa">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#fsadfasd"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Gatunek>
+
+<Rodzina rdf:about="#fsdfs">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Rodzaj rdf:about="#fsf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Gatunek rdf:about="#fdsf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#fsdfs"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Gatunek>
+
+<Rodzina rdf:about="#fasdf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Rodzaj rdf:about="#fdsaf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Gatunek"/>
+  <ma_sposob_odzywiania rdf:resource="#Roslinozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#dfasf"/>
+  <posiada_ceche rdf:resource="#Skrzydla"/>
+  <posiada_ceche rdf:resource="#Ogon"/>
+  <posiada_umiejetnosc rdf:resource="#Latanie"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Nierozpoznane"/>
+</Rodzaj>
+
+<Rodzina rdf:about="#sdafasd">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Gatunek rdf:about="#dfasf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#fasdf"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Gatunek>
+
+<Rodzaj rdf:about="#fsddf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Gatunek rdf:about="#aaaaaa">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#fsf"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Gatunek>
+
+<Gatunek rdf:about="#fadsf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#fasdf"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Gatunek>
+
+<Rodzina rdf:about="#rwer">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <rdf:type rdf:resource="#Gatunek"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#rwer"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Rodzina>
+
+<Rodzaj rdf:about="#rewr">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Rodzina rdf:about="#sdafas">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Rodzaj rdf:about="#fdasf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Gatunek rdf:about="#fsdfa">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#sdafas"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Gatunek>
+
+<Gatunek rdf:about="#fsdfsd">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#fsdf"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+  <posiada_liczbe_odnozy rdf:datatype="http://www.w3.org/2001/XMLSchema#string">4</posiada_liczbe_odnozy>
+</Gatunek>
+
+<Gatunek rdf:about="#zzzzzzzzzz">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#fsf"/>
+  <posiada_ceche rdf:resource="#Skrzydla"/>
+  <posiada_ceche rdf:resource="#Ogon"/>
+  <posiada_ceche rdf:resource="#Traba"/>
+  <posiada_ceche rdf:resource="#Pletwy"/>
+  <posiada_umiejetnosc rdf:resource="#Plywanie"/>
+  <posiada_umiejetnosc rdf:resource="#Latanie"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+</Gatunek>
+
+<Rodzina rdf:about="#fsdfsdf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Rodzaj rdf:about="#dfsdfs">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Gatunek rdf:about="#zzzz">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Miesozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#fdsfs"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Najmniejszej_troski"/>
+  <posiada_liczbe_odnozy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</posiada_liczbe_odnozy>
+</Gatunek>
+
+<Rodzina rdf:about="#asasd">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzina>
+
+<Rodzaj rdf:about="#sdfsadf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<Gatunek rdf:about="#fdsdf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+  <ma_sposob_odzywiania rdf:resource="#Wszystkozernosc"/>
+  <nalezy_do_gromady rdf:resource="#Gady"/>
+  <nalezy_do_rodziny rdf:resource="#asasd"/>
+  <posiada_ceche rdf:resource="#Pletwy"/>
+  <posiada_ceche rdf:resource="#Traba"/>
+  <posiada_ceche rdf:resource="#Skrzydla"/>
+  <posiada_ceche rdf:resource="#Ogon"/>
+  <posiada_umiejetnosc rdf:resource="#Latanie"/>
+  <posiada_umiejetnosc rdf:resource="#Plywanie"/>
+  <wystepuje_na_obszarze rdf:resource="#Afryka"/>
+  <znajduje_sie_w_kategorii_zagrozenia rdf:resource="#Wymarle"/>
+  <posiada_liczbe_odnozy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</posiada_liczbe_odnozy>
+  <posiada_liczbe_odnozy rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</posiada_liczbe_odnozy>
+</Gatunek>
+
+<Rodzaj rdf:about="#fdaszf">
+  <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
+</Rodzaj>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Gatunek"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#nalezy_do_rodziny"/>
+              <swrl:argument1 rdf:resource="urn:swrl#G"/>
+              <swrl:argument2 rdf:resource="#Kotowate"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:DatavaluedPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#posiada_liczbe_odnozy"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swrl:argument2>
+        </swrl:DatavaluedPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Gatunek"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#nalezy_do_rodzaju"/>
+              <swrl:argument1 rdf:resource="urn:swrl#G"/>
+              <swrl:argument2 rdf:resource="urn:swrl#R"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#G"/>
+                  <swrl:argument2 rdf:resource="#Traba"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#nalezy_do_gromady"/>
+          <swrl:argument1 rdf:resource="urn:swrl#R"/>
+          <swrl:argument2 rdf:resource="#Ssaki"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Gatunek"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
+              <swrl:argument1 rdf:resource="urn:swrl#G"/>
+              <swrl:argument2 rdf:resource="#Traba"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#ma_sposob_odzywiania"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+          <swrl:argument2 rdf:resource="#Roslinozernosc"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Gatunek"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
+              <swrl:argument1 rdf:resource="urn:swrl#G"/>
+              <swrl:argument2 rdf:resource="#Traba"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:DatavaluedPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#posiada_liczbe_odnozy"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swrl:argument2>
+        </swrl:DatavaluedPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Gatunek"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#Rodzaj"/>
+              <swrl:argument1 rdf:resource="urn:swrl#R"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#nalezy_do_rodzaju"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#G"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#R"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="#nalezy_do_gromady"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#R"/>
+                      <swrl:argument2 rdf:resource="#Ptaki"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:DatavaluedPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#posiada_liczbe_odnozy"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrl:argument2>
+        </swrl:DatavaluedPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Gatunek"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#posiada_umiejetnosc"/>
+              <swrl:argument1 rdf:resource="urn:swrl#G"/>
+              <swrl:argument2 rdf:resource="#Latanie"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+          <swrl:argument2 rdf:resource="#Skrzydla"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Gatunek"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#posiada_umiejetnosc"/>
+              <swrl:argument1 rdf:resource="urn:swrl#G"/>
+              <swrl:argument2 rdf:resource="#Latanie"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+          <swrl:argument2 rdf:resource="#Skrzydla"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Gatunek"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:ClassAtom>
+              <swrl:classPredicate rdf:resource="#Rodzaj"/>
+              <swrl:argument1 rdf:resource="urn:swrl#R"/>
+            </swrl:ClassAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#nalezy_do_rodzaju"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#G"/>
+                  <swrl:argument2 rdf:resource="urn:swrl#R"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest>
+                <rdf:Description>
+                  <rdf:first>
+                    <swrl:IndividualPropertyAtom>
+                      <swrl:propertyPredicate rdf:resource="#nalezy_do_gromady"/>
+                      <swrl:argument1 rdf:resource="urn:swrl#R"/>
+                      <swrl:argument2 rdf:resource="#Ptaki"/>
+                    </swrl:IndividualPropertyAtom>
+                  </rdf:first>
+                  <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:Description>
+              </rdf:rest>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:DatavaluedPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#posiada_liczbe_odnozy"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</swrl:argument2>
+        </swrl:DatavaluedPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Gatunek"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
+              <swrl:argument1 rdf:resource="urn:swrl#G"/>
+              <swrl:argument2 rdf:resource="#Traba"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:DatavaluedPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#posiada_liczbe_odnozy"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swrl:argument2>
+        </swrl:DatavaluedPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Gatunek"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
+              <swrl:argument1 rdf:resource="urn:swrl#G"/>
+              <swrl:argument2 rdf:resource="#Traba"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#ma_sposob_odzywiania"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+          <swrl:argument2 rdf:resource="#Roslinozernosc"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Gatunek"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#nalezy_do_rodzaju"/>
+              <swrl:argument1 rdf:resource="urn:swrl#G"/>
+              <swrl:argument2 rdf:resource="urn:swrl#R"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#G"/>
+                  <swrl:argument2 rdf:resource="#Traba"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#nalezy_do_gromady"/>
+          <swrl:argument1 rdf:resource="urn:swrl#R"/>
+          <swrl:argument2 rdf:resource="#Ssaki"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Gatunek"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#nalezy_do_rodziny"/>
+              <swrl:argument1 rdf:resource="urn:swrl#G"/>
+              <swrl:argument2 rdf:resource="#Kotowate"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:DatavaluedPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#posiada_liczbe_odnozy"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swrl:argument2>
+        </swrl:DatavaluedPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
 <swrl:Imp>
   <swrl:body>
     <rdf:Description>
@@ -645,94 +1574,9 @@
         <rdf:Description>
           <rdf:first>
             <swrl:IndividualPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#nalezy_do_rodziny"/>
+              <swrl:propertyPredicate rdf:resource="#posiada_umiejetnosc"/>
               <swrl:argument1 rdf:resource="urn:swrl#G"/>
-              <swrl:argument2 rdf:resource="#Kotowate"/>
-            </swrl:IndividualPropertyAtom>
-          </rdf:first>
-          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        </rdf:Description>
-      </rdf:rest>
-    </rdf:Description>
-  </swrl:body>
-  <swrl:head>
-    <rdf:Description>
-      <rdf:first>
-        <swrl:DatavaluedPropertyAtom>
-          <swrl:propertyPredicate rdf:resource="#posiada_liczbe_odnozy"/>
-          <swrl:argument1 rdf:resource="urn:swrl#G"/>
-          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swrl:argument2>
-        </swrl:DatavaluedPropertyAtom>
-      </rdf:first>
-      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    </rdf:Description>
-  </swrl:head>
-</swrl:Imp>
-
-<swrl:Imp>
-  <swrl:body>
-    <rdf:Description>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#Gatunek"/>
-          <swrl:argument1 rdf:resource="urn:swrl#G"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest>
-        <rdf:Description>
-          <rdf:first>
-            <swrl:IndividualPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#nalezy_do_rodzaju"/>
-              <swrl:argument1 rdf:resource="urn:swrl#G"/>
-              <swrl:argument2 rdf:resource="urn:swrl#R"/>
-            </swrl:IndividualPropertyAtom>
-          </rdf:first>
-          <rdf:rest>
-            <rdf:Description>
-              <rdf:first>
-                <swrl:IndividualPropertyAtom>
-                  <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
-                  <swrl:argument1 rdf:resource="urn:swrl#G"/>
-                  <swrl:argument2 rdf:resource="#Traba"/>
-                </swrl:IndividualPropertyAtom>
-              </rdf:first>
-              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </rdf:Description>
-          </rdf:rest>
-        </rdf:Description>
-      </rdf:rest>
-    </rdf:Description>
-  </swrl:body>
-  <swrl:head>
-    <rdf:Description>
-      <rdf:first>
-        <swrl:IndividualPropertyAtom>
-          <swrl:propertyPredicate rdf:resource="#nalezy_do_gromady"/>
-          <swrl:argument1 rdf:resource="urn:swrl#R"/>
-          <swrl:argument2 rdf:resource="#Ssaki"/>
-        </swrl:IndividualPropertyAtom>
-      </rdf:first>
-      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    </rdf:Description>
-  </swrl:head>
-</swrl:Imp>
-
-<swrl:Imp>
-  <swrl:body>
-    <rdf:Description>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#Gatunek"/>
-          <swrl:argument1 rdf:resource="urn:swrl#G"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest>
-        <rdf:Description>
-          <rdf:first>
-            <swrl:IndividualPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
-              <swrl:argument1 rdf:resource="urn:swrl#G"/>
-              <swrl:argument2 rdf:resource="#Traba"/>
+              <swrl:argument2 rdf:resource="#Latanie"/>
             </swrl:IndividualPropertyAtom>
           </rdf:first>
           <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -744,47 +1588,10 @@
     <rdf:Description>
       <rdf:first>
         <swrl:IndividualPropertyAtom>
-          <swrl:propertyPredicate rdf:resource="#ma_sposob_odzywiania"/>
+          <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
           <swrl:argument1 rdf:resource="urn:swrl#G"/>
-          <swrl:argument2 rdf:resource="#Roslinozernosc"/>
+          <swrl:argument2 rdf:resource="#Skrzydla"/>
         </swrl:IndividualPropertyAtom>
-      </rdf:first>
-      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-    </rdf:Description>
-  </swrl:head>
-</swrl:Imp>
-
-<swrl:Imp>
-  <swrl:body>
-    <rdf:Description>
-      <rdf:first>
-        <swrl:ClassAtom>
-          <swrl:classPredicate rdf:resource="#Gatunek"/>
-          <swrl:argument1 rdf:resource="urn:swrl#G"/>
-        </swrl:ClassAtom>
-      </rdf:first>
-      <rdf:rest>
-        <rdf:Description>
-          <rdf:first>
-            <swrl:IndividualPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
-              <swrl:argument1 rdf:resource="urn:swrl#G"/>
-              <swrl:argument2 rdf:resource="#Traba"/>
-            </swrl:IndividualPropertyAtom>
-          </rdf:first>
-          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        </rdf:Description>
-      </rdf:rest>
-    </rdf:Description>
-  </swrl:body>
-  <swrl:head>
-    <rdf:Description>
-      <rdf:first>
-        <swrl:DatavaluedPropertyAtom>
-          <swrl:propertyPredicate rdf:resource="#posiada_liczbe_odnozy"/>
-          <swrl:argument1 rdf:resource="urn:swrl#G"/>
-          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swrl:argument2>
-        </swrl:DatavaluedPropertyAtom>
       </rdf:first>
       <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     </rdf:Description>
@@ -862,9 +1669,9 @@
         <rdf:Description>
           <rdf:first>
             <swrl:IndividualPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#posiada_umiejetnosc"/>
+              <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
               <swrl:argument1 rdf:resource="urn:swrl#G"/>
-              <swrl:argument2 rdf:resource="#Latanie"/>
+              <swrl:argument2 rdf:resource="#Traba"/>
             </swrl:IndividualPropertyAtom>
           </rdf:first>
           <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -875,11 +1682,11 @@
   <swrl:head>
     <rdf:Description>
       <rdf:first>
-        <swrl:IndividualPropertyAtom>
-          <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
+        <swrl:DatavaluedPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#posiada_liczbe_odnozy"/>
           <swrl:argument1 rdf:resource="urn:swrl#G"/>
-          <swrl:argument2 rdf:resource="#Skrzydla"/>
-        </swrl:IndividualPropertyAtom>
+          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swrl:argument2>
+        </swrl:DatavaluedPropertyAtom>
       </rdf:first>
       <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     </rdf:Description>
@@ -899,9 +1706,9 @@
         <rdf:Description>
           <rdf:first>
             <swrl:IndividualPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#nalezy_do_rodziny"/>
+              <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
               <swrl:argument1 rdf:resource="urn:swrl#G"/>
-              <swrl:argument2 rdf:resource="#Kotowate"/>
+              <swrl:argument2 rdf:resource="#Traba"/>
             </swrl:IndividualPropertyAtom>
           </rdf:first>
           <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -912,11 +1719,11 @@
   <swrl:head>
     <rdf:Description>
       <rdf:first>
-        <swrl:DatavaluedPropertyAtom>
-          <swrl:propertyPredicate rdf:resource="#posiada_liczbe_odnozy"/>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#ma_sposob_odzywiania"/>
           <swrl:argument1 rdf:resource="urn:swrl#G"/>
-          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swrl:argument2>
-        </swrl:DatavaluedPropertyAtom>
+          <swrl:argument2 rdf:resource="#Roslinozernosc"/>
+        </swrl:IndividualPropertyAtom>
       </rdf:first>
       <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     </rdf:Description>
@@ -984,9 +1791,9 @@
         <rdf:Description>
           <rdf:first>
             <swrl:IndividualPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
+              <swrl:propertyPredicate rdf:resource="#nalezy_do_rodziny"/>
               <swrl:argument1 rdf:resource="urn:swrl#G"/>
-              <swrl:argument2 rdf:resource="#Traba"/>
+              <swrl:argument2 rdf:resource="#Kotowate"/>
             </swrl:IndividualPropertyAtom>
           </rdf:first>
           <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -997,11 +1804,11 @@
   <swrl:head>
     <rdf:Description>
       <rdf:first>
-        <swrl:IndividualPropertyAtom>
-          <swrl:propertyPredicate rdf:resource="#ma_sposob_odzywiania"/>
+        <swrl:DatavaluedPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#posiada_liczbe_odnozy"/>
           <swrl:argument1 rdf:resource="urn:swrl#G"/>
-          <swrl:argument2 rdf:resource="#Roslinozernosc"/>
-        </swrl:IndividualPropertyAtom>
+          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swrl:argument2>
+        </swrl:DatavaluedPropertyAtom>
       </rdf:first>
       <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     </rdf:Description>
@@ -1021,9 +1828,9 @@
         <rdf:Description>
           <rdf:first>
             <swrl:IndividualPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
+              <swrl:propertyPredicate rdf:resource="#posiada_umiejetnosc"/>
               <swrl:argument1 rdf:resource="urn:swrl#G"/>
-              <swrl:argument2 rdf:resource="#Traba"/>
+              <swrl:argument2 rdf:resource="#Latanie"/>
             </swrl:IndividualPropertyAtom>
           </rdf:first>
           <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1034,11 +1841,11 @@
   <swrl:head>
     <rdf:Description>
       <rdf:first>
-        <swrl:DatavaluedPropertyAtom>
-          <swrl:propertyPredicate rdf:resource="#posiada_liczbe_odnozy"/>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
           <swrl:argument1 rdf:resource="urn:swrl#G"/>
-          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swrl:argument2>
-        </swrl:DatavaluedPropertyAtom>
+          <swrl:argument2 rdf:resource="#Skrzydla"/>
+        </swrl:IndividualPropertyAtom>
       </rdf:first>
       <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     </rdf:Description>
@@ -1116,9 +1923,46 @@
         <rdf:Description>
           <rdf:first>
             <swrl:IndividualPropertyAtom>
-              <swrl:propertyPredicate rdf:resource="#posiada_umiejetnosc"/>
+              <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
               <swrl:argument1 rdf:resource="urn:swrl#G"/>
-              <swrl:argument2 rdf:resource="#Latanie"/>
+              <swrl:argument2 rdf:resource="#Traba"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:DatavaluedPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#posiada_liczbe_odnozy"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swrl:argument2>
+        </swrl:DatavaluedPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Gatunek"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
+              <swrl:argument1 rdf:resource="urn:swrl#G"/>
+              <swrl:argument2 rdf:resource="#Traba"/>
             </swrl:IndividualPropertyAtom>
           </rdf:first>
           <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1130,10 +1974,95 @@
     <rdf:Description>
       <rdf:first>
         <swrl:IndividualPropertyAtom>
-          <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
+          <swrl:propertyPredicate rdf:resource="#ma_sposob_odzywiania"/>
           <swrl:argument1 rdf:resource="urn:swrl#G"/>
-          <swrl:argument2 rdf:resource="#Skrzydla"/>
+          <swrl:argument2 rdf:resource="#Roslinozernosc"/>
         </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Gatunek"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#nalezy_do_rodzaju"/>
+              <swrl:argument1 rdf:resource="urn:swrl#G"/>
+              <swrl:argument2 rdf:resource="urn:swrl#R"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest>
+            <rdf:Description>
+              <rdf:first>
+                <swrl:IndividualPropertyAtom>
+                  <swrl:propertyPredicate rdf:resource="#posiada_ceche"/>
+                  <swrl:argument1 rdf:resource="urn:swrl#G"/>
+                  <swrl:argument2 rdf:resource="#Traba"/>
+                </swrl:IndividualPropertyAtom>
+              </rdf:first>
+              <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+          </rdf:rest>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:IndividualPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#nalezy_do_gromady"/>
+          <swrl:argument1 rdf:resource="urn:swrl#R"/>
+          <swrl:argument2 rdf:resource="#Ssaki"/>
+        </swrl:IndividualPropertyAtom>
+      </rdf:first>
+      <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+    </rdf:Description>
+  </swrl:head>
+</swrl:Imp>
+
+<swrl:Imp>
+  <swrl:body>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:ClassAtom>
+          <swrl:classPredicate rdf:resource="#Gatunek"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+        </swrl:ClassAtom>
+      </rdf:first>
+      <rdf:rest>
+        <rdf:Description>
+          <rdf:first>
+            <swrl:IndividualPropertyAtom>
+              <swrl:propertyPredicate rdf:resource="#nalezy_do_rodziny"/>
+              <swrl:argument1 rdf:resource="urn:swrl#G"/>
+              <swrl:argument2 rdf:resource="#Kotowate"/>
+            </swrl:IndividualPropertyAtom>
+          </rdf:first>
+          <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </rdf:Description>
+      </rdf:rest>
+    </rdf:Description>
+  </swrl:body>
+  <swrl:head>
+    <rdf:Description>
+      <rdf:first>
+        <swrl:DatavaluedPropertyAtom>
+          <swrl:propertyPredicate rdf:resource="#posiada_liczbe_odnozy"/>
+          <swrl:argument1 rdf:resource="urn:swrl#G"/>
+          <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swrl:argument2>
+        </swrl:DatavaluedPropertyAtom>
       </rdf:first>
       <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
     </rdf:Description>

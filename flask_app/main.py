@@ -1,46 +1,33 @@
 import json
+import unicodedata
 
 from flask import Flask, render_template, request, flash, url_for, session
 from werkzeug.utils import redirect
 from owlready2 import *
 from flask_app.config import Config
-from time import sleep
 
 app = Flask(__name__, static_url_path=Config.flask_static_url_path)
 app.config.from_object('config.BaseConfig')
 
 
-# def reason(onto):
-#     with onto:
-#         Imp().set_as_rule("Gatunek(?G), posiada_umiejetnosc(?G, Latanie) -> posiada_ceche(?G, Skrzydla)")
-#         Imp().set_as_rule(
-#             "Gatunek(?G) , Rodzaj(?R) , nalezy_do_rodzaju(?G, ?R) , nalezy_do_gromady(?R, Ptaki) -> posiada_liczbe_odnozy(?G, 2)")
-#         Imp().set_as_rule("Gatunek(?G) , posiada_ceche(?G, Traba) -> posiada_liczbe_odnozy(?G, 4)")
-#         Imp().set_as_rule("Gatunek(?G) , posiada_ceche(?G, Traba) -> ma_sposob_odzywiania(?G, Roslinozernosc)")
-#         Imp().set_as_rule(
-#             "Gatunek(?G) , nalezy_do_rodzaju(?G, ?R) , posiada_ceche(?G, Traba) -> nalezy_do_gromady(?R, Ssaki)")
-#         Imp().set_as_rule("Gatunek(?G) , nalezy_do_rodziny(?G, Kotowate) -> posiada_liczbe_odnozy(?G, 4)")
-#         sync_reasoner_pellet(infer_data_property_values=True, infer_property_values=True)
-#     return onto
-
-
 @app.route('/')
 @app.route('/home')
 def home():
-    return render_template('home.html', title='Strona główna')
+    return render_template('home.html', title='Strona glowna')
 
 
 def get_features():
-    features = {"Środowisko życia": {"id": "wystepuje_na_obszarze",
+    features = {"srodowisko zycia": {"id": "wystepuje_na_obszarze",
                                      "type": "select",
-                                     "values": ["Afryka", "Ameryka Północna", "Ameryka Południowa", "Ameryka Środkowa", "Australia", "Azja", "Europa", "Morza", "Oceany"]},
+                                     "values": ["Afryka", "Ameryka Polnocna", "Ameryka Poludniowa", "Ameryka srodkowa",
+                                                "Australia", "Azja", "Europa", "Morza", "Oceany"]},
                 "Rodzaj": {"id": "rodzaj",
                            "type": "str"},
-                "Liczba nóg": {"id": "posiada_liczbe_odnozy",
+                "Liczba nog": {"id": "posiada_liczbe_odnozy",
                                "type": "int"},
-                "Czy posiada skrzydła?": {"id": "skrzydla",
+                "Czy posiada skrzydla?": {"id": "skrzydla",
                                           "type": "bool"},
-                "Czy posiada trąbę?": {"id": "traba",
+                "Czy posiada trabe?": {"id": "traba",
                                        "type": "bool"}
                 }
     return features
@@ -54,15 +41,13 @@ def find_species():
             return redirect(request.url)
 
         # cechy:
-        # Gdy użytkownik nie sprecyzuje pola - brane są wszystkie rekordy z ontologii
-        liczba_nog = 'all'
-        obszar = 'all'
+        # Gdy uzytkownik nie sprecyzuje pola - brane sa wszystkie rekordy z ontologii
+        liczba_nog = None
+        obszar = None
         cechy = []
 
         # onto warunki
-
         onto1 = get_ontology("Atlas.owl").load()
-
 
         for feature in request.form:
             if feature == 'wystepuje_na_obszarze':
@@ -85,13 +70,22 @@ def find_species():
                 "Gatunek(?G) , nalezy_do_rodzaju(?G, ?R) , posiada_ceche(?G, Traba) -> nalezy_do_gromady(?R, Ssaki)")
             Imp().set_as_rule("Gatunek(?G) , nalezy_do_rodziny(?G, Kotowate) -> posiada_liczbe_odnozy(?G, 4)")
             sync_reasoner_pellet(infer_data_property_values=True, infer_property_values=True)
+            # result = {}
+            # result['nogi'] = onto1.search(posiada_liczbe_odnozy='*' if liczba_nog == 'all' else liczba_nog),
+            # result['obszar'] = onto1.search(wystepuje_na_obszarze='*' if obszar == 'all' else onto1[obszar]),
+            # result['cechy'] = onto1.search(posiada_ceche='*' if not cechy else onto1[cechy])
+            print(liczba_nog, obszar)
+            if not liczba_nog and not obszar:
+                result = onto1.search(is_a=onto1['Gatunek'], posiada_ceche=onto1[cechy])
+            # result = onto1.search(posiada_liczbe_odnozy='' if liczba_nog == 'all' else liczba_nog,
+            #                       wystepuje_na_obszarze='' if obszar == 'all' else onto1[obszar],
+            #                       posiada_ceche=onto1[cechy])
 
-            result = onto1.search(posiada_liczbe_odnozy='*' if liczba_nog == 'all' else liczba_nog,
-                              wystepuje_na_obszarze='*' if obszar == 'all' else onto1[obszar],
-                              posiada_ceche='*' if not cechy else cechy)
+            print(cechy)
+            print(result)
         species = [species.get_name().replace("_", " ") for species in result]
         return redirect(url_for('show_result', species=json.dumps(species)))
-    return render_template('find_species.html', title='Znajdź gatunek', features=get_features())
+    return render_template('find_species.html', title='Znajdz gatunek', features=get_features())
 
 
 @app.route('/result', methods=['GET', 'POST'])
@@ -107,7 +101,8 @@ def get_form_fields():
                             "required": True},
                 "Gromada": {"id": "gromada",
                             "type": "select",
-                            "values": ["Gady", "Krążkopławy", "Owady", "Pajęczaki", "Paprotniki", "Płazy", "Ptaki", "Ssaki", "Watrobowce"],
+                            "values": ["Gady", "Krazkoplawy", "Owady", "Pajeczaki", "Paprotniki", "Plazy", "Ptaki",
+                                       "Ssaki", "Watrobowce"],
                             "required": True},
                 "Rodzaj": {"id": "rodzaj",
                            "type": "str",
@@ -117,38 +112,40 @@ def get_form_fields():
                             "required": True},
                 "Obszar": {"id": "obszar",
                            "type": "select",
-                           "values": ["Afryka", "Ameryka Północna", "Ameryka Południowa", "Ameryka Środkowa", "Australia", "Azja", "Europa", "Morza", "Oceany"],
+                           "values": ["Afryka", "Ameryka Polnocna", "Ameryka Poludniowa", "Ameryka srodkowa",
+                                      "Australia", "Azja", "Europa", "Morza", "Oceany"],
                            "required": True},
-                "Sposób odżywiania": {"id": "sposob_odzywiania",
+                "Sposob odzywiania": {"id": "sposob_odzywiania",
                                       "type": "select",
-                                      "values": ["Mięsożerność", "Roślinożerność", "Wszystkożerność"],
+                                      "values": ["Miesozernosc", "Roslinozernosc", "Wszystkozernosc"],
                                       "required": True},
-                "Kategoria zagrożenia wyginięciem": {"id": "kategoria_zagrozenia",
+                "Kategoria zagrozenia wyginieciem": {"id": "kategoria_zagrozenia",
                                                      "type": "select",
-                                                     "values": ["Najmniejszej troski", "Nierozpoznane", "Wymarłe", "Zagrożone"],
+                                                     "values": ["Najmniejszej troski", "Nierozpoznane", "Wymarle",
+                                                                "Zagrozone"],
                                                      "required": True},
                 "Posiada ogon?": {"id": "czy_ogon",
                                   "type": "bool",
                                   "required": False},
-                "Posiada płetwy?": {"id": "czy_pletwy",
-                                  "type": "bool",
-                                  "required": False},
-                "Posiada skrzydła?": {"id": "czy_skrzydla",
-                                  "type": "bool",
-                                  "required": False},
-                "Posiada trąbę?": {"id": "czy_traba",
-                                  "type": "bool",
-                                  "required": False},
-                "Umie latać?": {"id": "czy_lata",
-                                  "type": "bool",
-                                  "required": False},
-                "Umie pływać?": {"id": "czy_plywa",
-                                  "type": "bool",
-                                  "required": False},
-                "Liczba odnóży": {"id": "ile_odnozy",
+                "Posiada pletwy?": {"id": "czy_pletwy",
+                                    "type": "bool",
+                                    "required": False},
+                "Posiada skrzydla?": {"id": "czy_skrzydla",
+                                      "type": "bool",
+                                      "required": False},
+                "Posiada trabe?": {"id": "czy_traba",
+                                   "type": "bool",
+                                   "required": False},
+                "Umie latac?": {"id": "czy_lata",
+                                "type": "bool",
+                                "required": False},
+                "Umie plywac?": {"id": "czy_plywa",
+                                 "type": "bool",
+                                 "required": False},
+                "Liczba odnozy": {"id": "ile_odnozy",
                                   "type": "int",
                                   "required": False},
-                "Masa ciała": {"id": "masa_ciala",
+                "Masa ciala": {"id": "masa_ciala",
                                "type": "int",
                                "required": False}
                 }
@@ -158,38 +155,68 @@ def get_form_fields():
 @app.route('/add_species', methods=['GET', 'POST'])
 def add_species():
     if request.method == 'POST':
-        print(request.form)  # Wypisanie parametrów z formularza
+        print(request.form)  # Wypisanie parametrow z formularza
         gatunek = request.form['gatunek'].replace(' ', '_')
         gromada = request.form['gromada'].replace(' ', '_')
+        rodzaj = request.form['rodzaj'].replace(' ', '_')
         rodzina = request.form['rodzina'].replace(' ', '_')
         obszar = request.form['obszar'].replace(' ', '_')
+        sposob_odz = request.form['sposob_odzywiania']
+        kategoria = request.form['kategoria_zagrozenia'].replace(' ', '_')
+        ile_odnozy = request.form['ile_odnozy']
+        masa_ciala = request.form['masa_ciala']
+
+        onto = get_ontology("Atlas.owl").load()  # Załadowanie onto
+
+        cechy = []
+        umiejetnosci = []
+        nogi = []
+        masa = []
+        re_dig = re.compile(r'^[1-9]+$')
+
+        for feature in request.form:
+            if feature == 'czy_ogon':
+                cechy.append(onto['Ogon'])
+            if feature == 'czy_pletwy':
+                cechy.append(onto['Pletwy'])
+            if feature == 'czy_skrzydla':
+                cechy.append(onto['Skrzydla'])
+            if feature == 'czy_traba':
+                cechy.append(onto['Traba'])
+            if feature == 'czy_plywa':
+                umiejetnosci.append(onto['Plywanie'])
+            if feature == 'czy_lata':
+                umiejetnosci.append(onto['Latanie'])
+            if feature == 'ile_odnozy' and re_dig.match(ile_odnozy):
+                nogi.append(int(ile_odnozy))
+            if feature == 'masa_ciala' and re_dig.match(masa_ciala):
+                nogi.append(int(masa_ciala))
 
         if any(map(str.isdigit, gatunek)) or any(map(str.isdigit, gromada)) or any(map(str.isdigit, rodzina)) or any(
                 map(str.isdigit, obszar)):
-            flash(f"Pola nie mogą zawierać liczb!", 'alert alert-danger')
+            flash(f"Pola nie moga zawierac liczb!", 'alert alert-danger')
             return redirect(request.url)
-
-        # Załadowanie ontologii
-        onto = get_ontology("Atlas.owl").load()
-        if not onto[gromada]:  # jeśli nie ma - utwórz nowe
-            onto.Gromada(gromada)
 
         if not onto[rodzina]:
             onto.Rodzina(rodzina)
 
-        if not onto[obszar]:
-            onto.Obszar(obszar)
+        if not onto[rodzaj]:
+            onto.Rodzaj(rodzaj)
 
-        if not onto[gatunek]:  # jeśli nie ma gatunku - uwórz
-            onto.Gatunek(gatunek, nalezy_do_gromady=[onto[gromada]],
-                         wystepuje_na_obszarze=[onto[obszar]],
-                         nalezy_do_rodziny=[onto[rodzina]])
-            flash(f"Indywiduum dodane do ontologii!", 'alert alert-success')
-            onto.save(file='Atlas.owl')
-        else:
-            flash(f"Indywiduum nie zostało dodane do ontologii! Gatunek już istnieje!", 'alert alert-danger')
-        sleep(1)
-        return redirect(request.url)
+        onto.Gatunek(gatunek, nalezy_do_gromady=[onto[gromada]],
+                     wystepuje_na_obszarze=[onto[obszar]],
+                     nalezy_do_rodziny=[onto[rodzina]],
+                     nalezy_rodzaju=[onto[rodzaj]],
+                     ma_sposob_odzywiania=[onto[sposob_odz]],
+                     znajduje_sie_w_kategorii_zagrozenia=[onto[kategoria]],
+                     posiada_ceche=cechy,
+                     posiada_umiejetnosc=umiejetnosci,
+                     posiada_liczbe_odnozy=nogi,
+                     posiada_mase_ciala=masa)
+
+        flash(f"Indywiduum dodane do ontologii!", 'alert alert-success')
+        onto.save(file='Atlas.owl')
+
     return render_template('add_species.html', title='Dodaj gatunek', form_fields=get_form_fields())
 
 

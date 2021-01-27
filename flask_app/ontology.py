@@ -4,7 +4,7 @@ import owlready2
 ### Playground for ontologies - nothing related to main app here
 
 # owlready2.JAVA_HOME = "/usr/lib/jvm/java-8-openjdk-amd64/jre/bin/java"
-onto_path.append('./')
+
 onto = get_ontology("Atlas.owl").load()
 
 
@@ -48,7 +48,7 @@ onto = reason(onto)
 # onto_obszar = onto.Obszar(obszar)
 # sarna = onto.Gatunek(gatunek, wystepuje_na_obszarze=[onto[obszar]])
 
-result=onto.search(posiada_liczbe_odnozy=4)
+result=onto.search(posiada_ceche='*')
 print(result)
 #onto.save(file='Atlas_Zwierzat_3.owl')
 
