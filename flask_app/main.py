@@ -14,12 +14,28 @@ onto_name = "Atlas.owl"
 
 def reason(onto):
     with onto:
-        Imp().set_as_rule("Gatunek(?G), posiada_umiejetnosc(?G, Latanie) -> posiada_ceche(?G, Skrzydla)")
-        Imp().set_as_rule("Gatunek(?G), nalezy_do_gromady(?G, Ptaki) ->posiada_liczbe_odnozy(?G, 2)")
-        Imp().set_as_rule("Gatunek(?G), posiada_ceche(?G, Traba) -> posiada_liczbe_odnozy(?G, 4)")
-        Imp().set_as_rule("Gatunek(?G), posiada_ceche(?G, Traba) -> ma_sposob_odzywiania(?G, Roslinozernosc)")
-        Imp().set_as_rule("Gatunek(?G), nalezy_do_rodzaju(?G, ?R) , posiada_ceche(?G, Traba) -> nalezy_do_gromady(?R, Ssaki)")
-        Imp().set_as_rule("Gatunek(?G), nalezy_do_rodziny(?G, Kotowate) -> posiada_liczbe_odnozy(?G, 4)")
+        Imp().set_as_rule(
+            "Gatunek(?G) , nalezy_do_rodzaju(?G, ?R) ^ posiada_ceche(?G, Traba) -> nalezy_do_gromady(?R, Ssaki)")
+        Imp().set_as_rule("Gatunek(?G) , posiada_ceche(?G, Pletwy) -> posiada_umiejetnosc(?G, Plywanie)")
+        Imp().set_as_rule("Gatunek(?G) , posiada_ceche(?G, Traba) -> posiada_liczbe_odnozy(?G, 4)")
+        Imp().set_as_rule(
+            "Gatunek(?G) ' Rodzaj(?R) ^ nalezy_do_rodzaju(?G, ?R) ^ nalezy_do_gromady(?R, Ptaki) -> posiada_ceche(?G, Skrzydla)")
+        Imp().set_as_rule(
+            "Gatunek(?G) ' Rodzaj(?R) ^ nalezy_do_rodzaju(?G, ?R) ^ nalezy_do_gromady(?R, Ptaki) -> posiada_liczbe_odnozy(?G, 2)")
+        Imp().set_as_rule("Gatunek(?G) ' nalezy_do_rodzaju(?G, Szop) -> posiada_liczbe_odnozy(?G, 4)")
+        Imp().set_as_rule(
+            "Gatunek(?G) ' nalezy_do_rodzaju(?G, Lampart) -> posiada_ceche(?G, Drapieznik) ^ posiada_liczbe_odnozy(?G, 4)")
+        Imp().set_as_rule("Gatunek(?G) ' posiada_ceche(?G, Traba) -> ma_sposob_odzywiania(?G, Roslinozernosc)")
+        Imp().set_as_rule("Gatunek(?G) ' posiada_ceche(?G, Drapieznik) -> ma_sposob_odzywiania(?G, Miesozernosc)")
+        Imp().set_as_rule(
+            "Gatunek(?G) ' nalezy_do_rodzaju(?G, Kot) -> posiada_liczbe_odnozy(?G, 4) ^ ma_sposob_odzywiania(?G, Miesozernosc)")
+        Imp().set_as_rule(
+            "Gatunek(?G) ' Rodzaj(?R) ^ nalezy_do_rodzaju(?G, ?R) ^ nalezy_do_gromady(?R, Promieniopletwe) -> posiada_ceche(?G, Pletwy) ^ posiada_umiejetnosc(?G, Plywanie) ^ posiada_ceche(?G, Skrzydla) ^ wystepuje_na_obszarze(?G, Ocean_Atlantycki) ^ wystepuje_na_obszarze(?G, Ocean_Spokojny)")
+        Imp().set_as_rule("Gatunek(?G) ' posiada_umiejetnosc(?G, Latanie) -> posiada_ceche(?G, Skrzydla)")
+        Imp().set_as_rule(
+            "Gatunek(?G) ' nalezy_do_rodzaju(?G, Delfin) -> posiada_ceche(?G, Pletwy) ^ posiada_umiejetnosc(?G, Plywanie) ^ ma_sposob_odzywiania(?G, Miesozernosc) ^ wystepuje_na_obszarze(?G, Ocean_Atlantycki) ^ wystepuje_na_obszarze(?G, Ocean_Spokojny) ^ posiada_ceche(?G, Instynkt_stadny)")
+        Imp().set_as_rule(
+            "Gatunek(?G) ' nalezy_do_rodzaju(?G, ?R) ^ nalezy_do_gromady(?R, Slimaki) -> posiada_liczbe_odnozy(?G, 1)")
         sync_reasoner_pellet(infer_data_property_values=True, infer_property_values=True)
     return onto
 
@@ -45,7 +61,11 @@ def get_features():
                 "Czy posiada skrzydla?": {"id": "skrzydla",
                                           "type": "bool"},
                 "Czy posiada trabe?": {"id": "traba",
-                                       "type": "bool"}
+                                       "type": "bool"},
+                "Czy posiada pletwy?": {"id": "pletwy",
+                                        "type": "bool"},
+                "Czy posiada ogon?": {"id": "ogon",
+                                      "type": "bool"}
                 }
     return features
 
@@ -77,6 +97,12 @@ def find_species():
             if feature == 'traba':
                 if request.form.get(feature) == 'on':
                     cechy.append(onto['Traba'])
+            if feature == 'ogon':
+                if request.form.get(feature) == 'on':
+                    cechy.append(onto['Ogon'])
+            if feature == 'pletwy':
+                if request.form.get(feature) == 'on':
+                    cechy.append(onto['Pletwy'])
 
         # Reasoner
         onto = reason(onto)
@@ -109,9 +135,6 @@ def get_form_fields():
                 "Rodzaj": {"id": "rodzaj",
                            "type": "str",
                            "required": True},
-                "Rodzina": {"id": "rodzina",
-                            "type": "str",
-                            "required": True},
                 "Obszar": {"id": "obszar",
                            "type": "select",
                            "values": ["Afryka", "Ameryka Polnocna", "Ameryka Poludniowa", "Ameryka srodkowa",
@@ -161,7 +184,6 @@ def add_species():
         gatunek = request.form['gatunek'].replace(' ', '_')
         gromada = request.form['gromada'].replace(' ', '_')
         rodzaj = request.form['rodzaj'].replace(' ', '_')
-        rodzina = request.form['rodzina'].replace(' ', '_')
         obszar = request.form['obszar'].replace(' ', '_')
         sposob_odz = request.form['sposob_odzywiania']
         kategoria = request.form['kategoria_zagrozenia'].replace(' ', '_')
@@ -172,7 +194,7 @@ def add_species():
 
         cechy, umiejetnosci, nogi, masa = [], [], [], []
 
-        re_dig = re.compile(r'^[1-9]+$')
+        re_dig = re.compile(r'^[0-9]+$')
 
         for feature in request.form:
             if feature == 'czy_ogon':
@@ -192,20 +214,16 @@ def add_species():
             if feature == 'masa_ciala' and re_dig.match(masa_ciala):
                 masa.append(int(masa_ciala))
 
-        if any(map(str.isdigit, gatunek)) or any(map(str.isdigit, gromada)) or any(map(str.isdigit, rodzina)) or any(
+        if any(map(str.isdigit, gatunek)) or any(map(str.isdigit, gromada)) or any(
                 map(str.isdigit, obszar)):
             flash(f"Pola nie moga zawierac liczb!", 'alert alert-danger')
             return redirect(request.url)
 
-        if not onto[rodzina]:
-            onto.Rodzina(rodzina)
-
         if not onto[rodzaj]:
             onto.Rodzaj(rodzaj)
 
-        onto.Gatunek(gatunek,nalezy_do_gromady=[onto[gromada]],
+        onto.Gatunek(gatunek, nalezy_do_gromady=[onto[gromada]],
                      wystepuje_na_obszarze=[onto[obszar]],
-                     nalezy_do_rodziny=[onto[rodzina]],
                      nalezy_rodzaju=[onto[rodzaj]],
                      ma_sposob_odzywiania=[onto[sposob_odz]],
                      znajduje_sie_w_kategorii_zagrozenia=[onto[kategoria]],

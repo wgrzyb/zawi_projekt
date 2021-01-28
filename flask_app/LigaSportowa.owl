@@ -14,16 +14,34 @@
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Prefix name="test" IRI="http://www.semanticweb.org/root/ontologies/2020/11/LigaSportowa"/>
     <Declaration>
+        <Class IRI="#NBA_Title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nagroda_indywidualna"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Nagroda_zespolowa"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Agent_zawodnika"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#All_Star"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Asystent_trenera"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Coach_of_the_Year"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Czlonek_kadry_szkoleniowej"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Czlonek_zespolu"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Defensive_Player_of_the_Year"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Doswiadczenie"/>
@@ -35,10 +53,25 @@
         <Class IRI="#Miasto"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#Most_Improved_Player"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Most_Valuable_Player"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Nagroda"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Pozycja"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rookie_of_the_Year"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Scoring_Title"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Sixth_Man_of_the_Year"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Trener"/>
@@ -77,6 +110,9 @@
         <ObjectProperty IRI="#zdobyl_nagrode"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#zdobyta_przez"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#znajduje_sie_w_konferencji"/>
     </Declaration>
     <Declaration>
@@ -96,6 +132,15 @@
     </Declaration>
     <Declaration>
         <DataProperty IRI="#zdraftowany_z_numerem"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#CotY_1996"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#MVP_2008"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#NBA_Title_2009"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Anthony_Edwards"/>
@@ -137,16 +182,10 @@
         <NamedIndividual IRI="#Cleveland_Cavaliers"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Coach_of_the_Year"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Dallas"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Dallas_Mavericks"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Defensive_Player_of_the_Year"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Denver"/>
@@ -230,12 +269,6 @@
         <NamedIndividual IRI="#Minnesota_Timberwolves"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Most_Improved_Player"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Most_Valuable_Player"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#New_Orleans"/>
     </Declaration>
     <Declaration>
@@ -281,16 +314,10 @@
         <NamedIndividual IRI="#Portland_Trail_Blazers"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Retired"/>
-    </Declaration>
-    <Declaration>
         <NamedIndividual IRI="#Rob_Pelinka"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Rookie"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Rookie_of_the_Year"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Sacramento"/>
@@ -306,12 +333,6 @@
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#San_Francisco"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Scoring_Title"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="#Sixth_Man_of_the_Year"/>
     </Declaration>
     <Declaration>
         <NamedIndividual IRI="#Sophomore"/>
@@ -423,15 +444,10 @@
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Nagroda"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="#zdobyta_w_roku"/>
-            <DatatypeRestriction>
-                <Datatype abbreviatedIRI="xsd:int"/>
-                <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive">
-                    <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#int">1946</Literal>
-                </FacetRestriction>
-            </DatatypeRestriction>
-        </DataSomeValuesFrom>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="#zdobyta_przez"/>
+            <Class IRI="#Zawodnik"/>
+        </ObjectSomeValuesFrom>
     </EquivalentClasses>
     <EquivalentClasses>
         <Class IRI="#Pozycja"/>
@@ -489,12 +505,56 @@
         </ObjectExactCardinality>
     </EquivalentClasses>
     <SubClassOf>
+        <Class IRI="#NBA_Title"/>
+        <Class IRI="#Nagroda_zespolowa"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nagroda_indywidualna"/>
+        <Class IRI="#Nagroda"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Nagroda_zespolowa"/>
+        <Class IRI="#Nagroda"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#All_Star"/>
+        <Class IRI="#Nagroda_indywidualna"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Asystent_trenera"/>
         <Class IRI="#Czlonek_kadry_szkoleniowej"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#Coach_of_the_Year"/>
+        <Class IRI="#Nagroda_indywidualna"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Czlonek_kadry_szkoleniowej"/>
         <Class IRI="#Czlonek_zespolu"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Defensive_Player_of_the_Year"/>
+        <Class IRI="#Nagroda_indywidualna"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Most_Improved_Player"/>
+        <Class IRI="#Nagroda_indywidualna"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Most_Valuable_Player"/>
+        <Class IRI="#Nagroda_indywidualna"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rookie_of_the_Year"/>
+        <Class IRI="#Nagroda_indywidualna"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Scoring_Title"/>
+        <Class IRI="#Nagroda_indywidualna"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Sixth_Man_of_the_Year"/>
+        <Class IRI="#Nagroda_indywidualna"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Trener"/>
@@ -504,6 +564,28 @@
         <Class IRI="#Zawodnik"/>
         <Class IRI="#Czlonek_zespolu"/>
     </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#All_Star"/>
+        <Class IRI="#Coach_of_the_Year"/>
+        <Class IRI="#Defensive_Player_of_the_Year"/>
+        <Class IRI="#Most_Improved_Player"/>
+        <Class IRI="#Most_Valuable_Player"/>
+        <Class IRI="#Rookie_of_the_Year"/>
+        <Class IRI="#Scoring_Title"/>
+        <Class IRI="#Sixth_Man_of_the_Year"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#Coach_of_the_Year"/>
+        <NamedIndividual IRI="#CotY_1996"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Most_Valuable_Player"/>
+        <NamedIndividual IRI="#MVP_2008"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NBA_Title"/>
+        <NamedIndividual IRI="#NBA_Title_2009"/>
+    </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Zawodnik"/>
         <NamedIndividual IRI="#Anthony_Edwards"/>
@@ -557,20 +639,12 @@
         <NamedIndividual IRI="#Cleveland_Cavaliers"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Nagroda"/>
-        <NamedIndividual IRI="#Coach_of_the_Year"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Miasto"/>
         <NamedIndividual IRI="#Dallas"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Zespol"/>
         <NamedIndividual IRI="#Dallas_Mavericks"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Nagroda"/>
-        <NamedIndividual IRI="#Defensive_Player_of_the_Year"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Miasto"/>
@@ -681,14 +755,6 @@
         <NamedIndividual IRI="#Minnesota_Timberwolves"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Nagroda"/>
-        <NamedIndividual IRI="#Most_Improved_Player"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Nagroda"/>
-        <NamedIndividual IRI="#Most_Valuable_Player"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Miasto"/>
         <NamedIndividual IRI="#New_Orleans"/>
     </ClassAssertion>
@@ -757,10 +823,6 @@
         <NamedIndividual IRI="#Rookie"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Nagroda"/>
-        <NamedIndividual IRI="#Rookie_of_the_Year"/>
-    </ClassAssertion>
-    <ClassAssertion>
         <Class IRI="#Miasto"/>
         <NamedIndividual IRI="#Sacramento"/>
     </ClassAssertion>
@@ -779,14 +841,6 @@
     <ClassAssertion>
         <Class IRI="#Miasto"/>
         <NamedIndividual IRI="#San_Francisco"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Nagroda"/>
-        <NamedIndividual IRI="#Scoring_Title"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Class IRI="#Nagroda"/>
-        <NamedIndividual IRI="#Sixth_Man_of_the_Year"/>
     </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Doswiadczenie"/>
@@ -855,6 +909,16 @@
         <NamedIndividual IRI="#Los_Angeles_Lakers"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#zdobyl_nagrode"/>
+        <NamedIndividual IRI="#Kobe_Bryant"/>
+        <NamedIndividual IRI="#MVP_2008"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#zdobyl_nagrode"/>
+        <NamedIndividual IRI="#Kobe_Bryant"/>
+        <NamedIndividual IRI="#NBA_Title_2009"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
         <ObjectProperty IRI="#znajduje_sie_w_konferencji"/>
         <NamedIndividual IRI="#Los_Angeles"/>
         <NamedIndividual IRI="#Konferencja_zachodnia"/>
@@ -868,6 +932,11 @@
         <ObjectProperty IRI="#pracuje_dla"/>
         <NamedIndividual IRI="#Phil_Jackson"/>
         <NamedIndividual IRI="#Los_Angeles_Lakers"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#zdobyl_nagrode"/>
+        <NamedIndividual IRI="#Phil_Jackson"/>
+        <NamedIndividual IRI="#CotY_1996"/>
     </ObjectPropertyAssertion>
     <ObjectPropertyAssertion>
         <ObjectProperty IRI="#gra_na_pozycji"/>
@@ -957,6 +1026,10 @@
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
     <SubObjectPropertyOf>
+        <ObjectProperty IRI="#zdobyta_przez"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <SubObjectPropertyOf>
         <ObjectProperty IRI="#znajduje_sie_w_konferencji"/>
         <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
     </SubObjectPropertyOf>
@@ -967,6 +1040,10 @@
     <InverseObjectProperties>
         <ObjectProperty IRI="#posiada_pracownika"/>
         <ObjectProperty IRI="#pracuje_dla"/>
+    </InverseObjectProperties>
+    <InverseObjectProperties>
+        <ObjectProperty IRI="#zdobyl_nagrode"/>
+        <ObjectProperty IRI="#zdobyta_przez"/>
     </InverseObjectProperties>
     <SubDataPropertyOf>
         <DataProperty IRI="#gra_z_numerem"/>
