@@ -1,25 +1,25 @@
 import json
-import unicodedata
 
-from flask import Flask, render_template, request, flash, url_for, session
+from flask import Flask, render_template, request, flash, url_for
 from werkzeug.utils import redirect
 from owlready2 import *
 from flask_app.config import Config
 
 app = Flask(__name__, static_url_path=Config.flask_static_url_path)
 app.config.from_object('config.BaseConfig')
+onto_name = "Atlas.owl"
+
+
 # owlready2.JAVA_EXE = r"D:\Program Files\JetBrains\PyCharm Projects\zawi_projekt\jdk-15.0.2\bin\java.exe"
 
 def reason(onto):
     with onto:
         Imp().set_as_rule("Gatunek(?G), posiada_umiejetnosc(?G, Latanie) -> posiada_ceche(?G, Skrzydla)")
-        Imp().set_as_rule(
-            "Gatunek(?G) , Rodzaj(?R) , nalezy_do_rodzaju(?G, ?R) , nalezy_do_gromady(?R, Ptaki) -> posiada_liczbe_odnozy(?G, 2)")
-        Imp().set_as_rule("Gatunek(?G) , posiada_ceche(?G, Traba) -> posiada_liczbe_odnozy(?G, 4)")
-        Imp().set_as_rule("Gatunek(?G) , posiada_ceche(?G, Traba) -> ma_sposob_odzywiania(?G, Roslinozernosc)")
-        Imp().set_as_rule(
-            "Gatunek(?G) , nalezy_do_rodzaju(?G, ?R) , posiada_ceche(?G, Traba) -> nalezy_do_gromady(?R, Ssaki)")
-        Imp().set_as_rule("Gatunek(?G) , nalezy_do_rodziny(?G, Kotowate) -> posiada_liczbe_odnozy(?G, 4)")
+        Imp().set_as_rule("Gatunek(?G), nalezy_do_gromady(?G, Ptaki) ->posiada_liczbe_odnozy(?G, 2)")
+        Imp().set_as_rule("Gatunek(?G), posiada_ceche(?G, Traba) -> posiada_liczbe_odnozy(?G, 4)")
+        Imp().set_as_rule("Gatunek(?G), posiada_ceche(?G, Traba) -> ma_sposob_odzywiania(?G, Roslinozernosc)")
+        Imp().set_as_rule("Gatunek(?G), nalezy_do_rodzaju(?G, ?R) , posiada_ceche(?G, Traba) -> nalezy_do_gromady(?R, Ssaki)")
+        Imp().set_as_rule("Gatunek(?G), nalezy_do_rodziny(?G, Kotowate) -> posiada_liczbe_odnozy(?G, 4)")
         sync_reasoner_pellet(infer_data_property_values=True, infer_property_values=True)
     return onto
 
@@ -35,6 +35,9 @@ def get_features():
                                      "type": "select",
                                      "values": ["Afryka", "Ameryka Polnocna", "Ameryka Poludniowa", "Ameryka srodkowa",
                                                 "Australia", "Azja", "Europa", "Morza", "Oceany"]},
+                "Sposob odzywiania": {"id": "dieta",
+                                      "type": "select",
+                                      "values": ["Roslinozernosc", "Miesozernosc", "Wszystkozernosc"]},
                 "Rodzaj": {"id": "rodzaj",
                            "type": "str"},
                 "Liczba nog": {"id": "posiada_liczbe_odnozy",
@@ -54,44 +57,35 @@ def find_species():
             flash(f"Nie podano cech!", 'alert alert-danger')
             return redirect(request.url)
 
-        # Cechy:
-        # Gdy uzytkownik nie sprecyzuje pola - brane sa wszystkie rekordy z ontologii
+        nogi, obszar, cechy, rodzaj, dieta = [], [], [], [], []
 
-        nogi = []
-        obszar = []
-        cechy = []
-
-        # onto warunki
-        onto = get_ontology("Atlas.owl").load()
+        # onto wczytane
+        onto = get_ontology(onto_name).load()
 
         for feature in request.form:
             if feature == 'wystepuje_na_obszarze':
-                obszar.append(request.form['wystepuje_na_obszarze'].replace(' ', '_'))
+                obszar.append(onto[request.form['wystepuje_na_obszarze'].replace(' ', '_')])
+            if feature == 'dieta':
+                dieta.append(onto[request.form['dieta'].replace(' ', '_')])
+            if feature == 'rodzaj':
+                rodzaj.append(onto[request.form['rodzaj'].replace(' ', '_')])
             if feature == 'posiada_liczbe_odnozy':
-                nogi.append(request.form.get(int(request.form['posiada_liczbe_odnozy'])))
+                nogi.append(int(request.form['posiada_liczbe_odnozy']))
             if feature == 'skrzydla':
                 if request.form.get(feature) == 'on':
                     cechy.append(onto['Skrzydla'])
             if feature == 'traba':
                 if request.form.get(feature) == 'on':
                     cechy.append(onto['Traba'])
-        print(obszar, nogi)
-        # result = {}
-        # result['nogi'] = onto.search(posiada_liczbe_odnozy='*' if liczba_nog == 'all' else liczba_nog),
-        # result['obszar'] = onto.search(wystepuje_na_obszarze='*' if obszar == 'all' else onto[obszar]),
-        # result['cechy'] = onto.search(posiada_ceche='*' if not cechy else onto[cechy])
-        # print(liczba_nog, obszar)
-        # if not liczba_nog and not obszar:
 
-        kwargs_dict = {"is_a" : onto['Gatunek'], "posiada_ceche": cechy}
-
+        # Reasoner
         onto = reason(onto)
+
+        kwargs_dict = {"is_a": onto['Gatunek'], "posiada_ceche": cechy, "wystepuje_na_obszarze": obszar,
+                       "nalezy_do_rodzaju": rodzaj, "ma_sposob_odzywiania": dieta, "posiada_liczbe_odnozy": nogi}
+
         result = onto.search(**kwargs_dict)
         print(result)
-        # result = onto.search(posiada_liczbe_odnozy='' if liczba_nog == 'all' else liczba_nog,
-        #                       wystepuje_na_obszarze='' if obszar == 'all' else onto[obszar],
-        #                       posiada_ceche=onto[cechy])
-
         species = [species.get_name().replace("_", " ") for species in result]
         return redirect(url_for('show_result', species=json.dumps(species)))
     return render_template('find_species.html', title='Znajdz gatunek', features=get_features())
@@ -174,12 +168,10 @@ def add_species():
         ile_odnozy = request.form['ile_odnozy']
         masa_ciala = request.form['masa_ciala']
 
-        onto = get_ontology("Atlas.owl").load()  # Załadowanie onto
+        onto = get_ontology(onto_name).load()  # Załadowanie onto
 
-        cechy = []
-        umiejetnosci = []
-        nogi = []
-        masa = []
+        cechy, umiejetnosci, nogi, masa = [], [], [], []
+
         re_dig = re.compile(r'^[1-9]+$')
 
         for feature in request.form:
@@ -198,7 +190,7 @@ def add_species():
             if feature == 'ile_odnozy' and re_dig.match(ile_odnozy):
                 nogi.append(int(ile_odnozy))
             if feature == 'masa_ciala' and re_dig.match(masa_ciala):
-                nogi.append(int(masa_ciala))
+                masa.append(int(masa_ciala))
 
         if any(map(str.isdigit, gatunek)) or any(map(str.isdigit, gromada)) or any(map(str.isdigit, rodzina)) or any(
                 map(str.isdigit, obszar)):
@@ -211,7 +203,7 @@ def add_species():
         if not onto[rodzaj]:
             onto.Rodzaj(rodzaj)
 
-        onto.Gatunek(gatunek, nalezy_do_gromady=[onto[gromada]],
+        onto.Gatunek(gatunek,nalezy_do_gromady=[onto[gromada]],
                      wystepuje_na_obszarze=[onto[obszar]],
                      nalezy_do_rodziny=[onto[rodzina]],
                      nalezy_rodzaju=[onto[rodzaj]],
@@ -229,6 +221,4 @@ def add_species():
 
 
 if __name__ == '__main__':
-    # app.jinja_env.auto_reload = True
-    # app.config['TEMPLATES_AUTO_RELOAD'] = True
     app.run(port=Config.flask_port)

@@ -16,7 +16,7 @@ onto = get_ontology("Atlas.owl").load()
 # print(list(onto.data_properties()))
 # print(onto.get_instances_of(onto.Cecha))
 # print(onto.get_instances_of(onto.Gromada))
-print("gat",onto.get_instances_of(onto.Gatunek))
+print("gat", onto.get_instances_of(onto.Gatunek))
 result=onto.search(posiada_liczbe_odnozy=4)
 print(result)
 # print(onto.get_instances_of(onto.Kategoria_zagrozenia_wyginieciem))
@@ -33,7 +33,7 @@ print(result)
 
 
 
-onto = reason(onto)
+# onto = reason(onto)
 # onto_obszar = onto.Obszar(obszar)
 # sarna = onto.Gatunek(gatunek, wystepuje_na_obszarze=[onto[obszar]])
 
