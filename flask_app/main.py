@@ -7,7 +7,7 @@ from flask_app.config import Config
 
 app = Flask(__name__, static_url_path=Config.flask_static_url_path)
 app.config.from_object('config.BaseConfig')
-onto_name = "Atlas.owl"
+onto_name = "Atlas_Zwierzat.owl"
 
 
 # owlready2.JAVA_EXE = r"D:\Program Files\JetBrains\PyCharm Projects\zawi_projekt\jdk-15.0.2\bin\java.exe"
@@ -50,7 +50,10 @@ def get_features():
     features = {"Srodowisko zycia": {"id": "wystepuje_na_obszarze",
                                      "type": "select",
                                      "values": ["Afryka", "Ameryka Polnocna", "Ameryka Poludniowa", "Ameryka srodkowa",
-                                                "Australia", "Azja", "Europa", "Morza", "Oceany"]},
+                                                "Antarktyda", "Australia", "Azja", "Europa", "Borneo", "Grenlandia",
+                                                "Jawa", "Madagaskar", "Jezioro Kaspijskie", "Morze Baltyckie",
+                                                "Ocean Arktyczny", "Ocean Atlantycki", "Ocean Indyjski",
+                                                "Ocean Spokojny"]},
                 "Sposob odzywiania": {"id": "dieta",
                                       "type": "select",
                                       "values": ["Roslinozernosc", "Miesozernosc", "Wszystkozernosc"]},
@@ -129,8 +132,8 @@ def get_form_fields():
                             "required": True},
                 "Gromada": {"id": "gromada",
                             "type": "select",
-                            "values": ["Gady", "Krazkoplawy", "Owady", "Pajeczaki", "Paprotniki", "Plazy", "Ptaki",
-                                       "Ssaki", "Watrobowce"],
+                            "values": ["Gady", "Krazkoplawy", "Owady", "Pajeczaki", "Paprotniki", "Plazy",
+                                       "Promieniopletwe", "Ptaki", "Slimaki", "Ssaki", "Watrobowce"],
                             "required": True},
                 "Rodzaj": {"id": "rodzaj",
                            "type": "str",
@@ -138,7 +141,9 @@ def get_form_fields():
                 "Obszar": {"id": "obszar",
                            "type": "select",
                            "values": ["Afryka", "Ameryka Polnocna", "Ameryka Poludniowa", "Ameryka srodkowa",
-                                      "Australia", "Azja", "Europa", "Morza", "Oceany"],
+                                      "Antarktyda", "Australia", "Azja", "Europa", "Borneo", "Grenlandia", "Jawa",
+                                      "Madagaskar", "Jezioro Kaspijskie", "Morze Baltyckie", "Ocean Arktyczny",
+                                      "Ocean Atlantycki", "Ocean Indyjski", "Ocean Spokojny"],
                            "required": True},
                 "Sposob odzywiania": {"id": "sposob_odzywiania",
                                       "type": "select",
@@ -161,12 +166,24 @@ def get_form_fields():
                 "Posiada trabe?": {"id": "czy_traba",
                                    "type": "bool",
                                    "required": False},
+                "Czy drapieznik?": {"id": "czy_drapeznik",
+                                    "type": "bool",
+                                    "required": False},
+                "Czy instynkt stadny?": {"id": "czy_instynkt_stadny",
+                                         "type": "bool",
+                                         "required": False},
                 "Umie latac?": {"id": "czy_lata",
                                 "type": "bool",
                                 "required": False},
                 "Umie plywac?": {"id": "czy_plywa",
                                  "type": "bool",
                                  "required": False},
+                "Umie echolokalizowac?": {"id": "czy_echolokalizuje",
+                                          "type": "bool",
+                                          "required": False},
+                "Umie hibernowac?": {"id": "czy_hibernuje",
+                                     "type": "bool",
+                                     "required": False},
                 "Liczba odnozy": {"id": "ile_odnozy",
                                   "type": "int",
                                   "required": False},
@@ -233,7 +250,7 @@ def add_species():
                      posiada_mase_ciala=masa)
 
         flash(f"Indywiduum dodane do ontologii!", 'alert alert-success')
-        onto.save(file='Atlas.owl')
+        onto.save(file='Atlas_Zwierzat.owl')
 
     return render_template('add_species.html', title='Dodaj gatunek', form_fields=get_form_fields())
 

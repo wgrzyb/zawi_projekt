@@ -137,141 +137,18 @@
     
 
 
-    <!-- #Cecha_fizyczna -->
-
-    <owl:Class rdf:about="#Cecha_fizyczna">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha"/>
-    </owl:Class>
-    
-
-
-    <!-- #Cecha_psychiczna -->
-
-    <owl:Class rdf:about="#Cecha_psychiczna">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha"/>
-    </owl:Class>
-    
-
-
-    <!-- #Jezioro -->
-
-    <owl:Class rdf:about="#Jezioro">
-        <rdfs:subClassOf rdf:resource="#Obszar_wodny_slodkowodny"/>
-    </owl:Class>
-    
-
-
-    <!-- #Kontynent -->
-
-    <owl:Class rdf:about="#Kontynent">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#Ameryka_Srodkowa"/>
-                    <rdf:Description rdf:about="#Antarktyda"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Afryka"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ameryka_Polnocna"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ameryka_Poludniowa"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Australia"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Azja"/>
-                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Europa"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="#Obszar_ladowy"/>
-    </owl:Class>
-    
-
-
-    <!-- #Morze -->
-
-    <owl:Class rdf:about="#Morze">
-        <rdfs:subClassOf rdf:resource="#Obszar_wodny_slonowodny"/>
-    </owl:Class>
-    
-
-
-    <!-- #Obszar_ladowy -->
-
-    <owl:Class rdf:about="#Obszar_ladowy">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar"/>
-    </owl:Class>
-    
-
-
-    <!-- #Obszar_wodny -->
-
-    <owl:Class rdf:about="#Obszar_wodny">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar"/>
-    </owl:Class>
-    
-
-
-    <!-- #Obszar_wodny_slodkowodny -->
-
-    <owl:Class rdf:about="#Obszar_wodny_slodkowodny">
-        <rdfs:subClassOf rdf:resource="#Obszar_wodny"/>
-    </owl:Class>
-    
-
-
-    <!-- #Obszar_wodny_slonowodny -->
-
-    <owl:Class rdf:about="#Obszar_wodny_slonowodny">
-        <rdfs:subClassOf rdf:resource="#Obszar_wodny"/>
-    </owl:Class>
-    
-
-
-    <!-- #Ocean -->
-
-    <owl:Class rdf:about="#Ocean">
-        <owl:equivalentClass>
-            <owl:Class>
-                <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#Ocean_Arktyczny"/>
-                    <rdf:Description rdf:about="#Ocean_Atlantycki"/>
-                    <rdf:Description rdf:about="#Ocean_Indyjski"/>
-                    <rdf:Description rdf:about="#Ocean_Spokojny"/>
-                </owl:oneOf>
-            </owl:Class>
-        </owl:equivalentClass>
-        <rdfs:subClassOf rdf:resource="#Obszar_wodny_slonowodny"/>
-    </owl:Class>
-    
-
-
-    <!-- #Umiejetnosc_nabyta -->
-
-    <owl:Class rdf:about="#Umiejetnosc_nabyta">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Umiejetnosc"/>
-    </owl:Class>
-    
-
-
-    <!-- #Umiejetnosc_wrodzona -->
-
-    <owl:Class rdf:about="#Umiejetnosc_wrodzona">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Umiejetnosc"/>
-    </owl:Class>
-    
-
-
-    <!-- #Wyspa -->
-
-    <owl:Class rdf:about="#Wyspa">
-        <rdfs:subClassOf rdf:resource="#Obszar_ladowy"/>
-    </owl:Class>
-    
-
-
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha">
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha"/>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha_fizyczna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha_fizyczna">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#Instynkt_stadny"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ogon"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Pletwy"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Skrzydla"/>
@@ -279,6 +156,23 @@
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha_psychiczna -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha_psychiczna">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Drapieznik"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Instynkt_stadny"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha"/>
     </owl:Class>
     
 
@@ -338,7 +232,6 @@
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="#Slimaki"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Gady"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Krazkoplawy"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Owady"/>
@@ -347,11 +240,20 @@
                     <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Plazy"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Promieniopletwe"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ptaki"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Slimaki"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ssaki"/>
                     <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Watrobowce"/>
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Jezioro -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Jezioro">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar_wodny_slodkowodny"/>
     </owl:Class>
     
 
@@ -373,9 +275,89 @@
     
 
 
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Kontynent -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Kontynent">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Afryka"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ameryka_Polnocna"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ameryka_Poludniowa"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ameryka_Srodkowa"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Antarktyda"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Australia"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Azja"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Europa"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar_ladowy"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Morze -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Morze">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar_wodny_slonowodny"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar"/>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar_ladowy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar_ladowy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar_wodny -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar_wodny">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar_wodny_slodkowodny -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar_wodny_slodkowodny">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar_wodny"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar_wodny_slonowodny -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar_wodny_slonowodny">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar_wodny"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Arktyczny"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Atlantycki"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Indyjski"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Spokojny"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar_wodny_slonowodny"/>
+    </owl:Class>
     
 
 
@@ -410,7 +392,13 @@
 
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Umiejetnosc -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Umiejetnosc">
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Umiejetnosc"/>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Umiejetnosc_nabyta -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Umiejetnosc_nabyta">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:oneOf rdf:parseType="Collection">
@@ -419,6 +407,31 @@
                 </owl:oneOf>
             </owl:Class>
         </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Umiejetnosc"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Umiejetnosc_wrodzona -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Umiejetnosc_wrodzona">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:oneOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Echolokalizowanie"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Hibernacja"/>
+                </owl:oneOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Umiejetnosc"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Wyspa -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Wyspa">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Obszar_ladowy"/>
     </owl:Class>
     
 
@@ -434,172 +447,10 @@
     
 
 
-    <!-- #Ameryka_Srodkowa -->
-
-    <owl:NamedIndividual rdf:about="#Ameryka_Srodkowa">
-        <rdf:type rdf:resource="#Kontynent"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Antarktyda -->
-
-    <owl:NamedIndividual rdf:about="#Antarktyda">
-        <rdf:type rdf:resource="#Kontynent"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Borneo -->
-
-    <owl:NamedIndividual rdf:about="#Borneo">
-        <rdf:type rdf:resource="#Wyspa"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Drapieznik -->
-
-    <owl:NamedIndividual rdf:about="#Drapieznik">
-        <rdf:type rdf:resource="#Cecha_psychiczna"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Echolokalizowanie -->
-
-    <owl:NamedIndividual rdf:about="#Echolokalizowanie">
-        <rdf:type rdf:resource="#Umiejetnosc_wrodzona"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Grenlandia -->
-
-    <owl:NamedIndividual rdf:about="#Grenlandia">
-        <rdf:type rdf:resource="#Wyspa"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Helix -->
-
-    <owl:NamedIndividual rdf:about="#Helix">
-        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Rodzaj"/>
-        <nalezy_do_gromady rdf:resource="#Slimaki"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Hibernacja -->
-
-    <owl:NamedIndividual rdf:about="#Hibernacja">
-        <rdf:type rdf:resource="#Umiejetnosc_wrodzona"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Instynkt_stadny -->
-
-    <owl:NamedIndividual rdf:about="#Instynkt_stadny">
-        <rdf:type rdf:resource="#Cecha_psychiczna"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Jawa -->
-
-    <owl:NamedIndividual rdf:about="#Jawa">
-        <rdf:type rdf:resource="#Wyspa"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Jezioro_Kaspijskie -->
-
-    <owl:NamedIndividual rdf:about="#Jezioro_Kaspijskie">
-        <rdf:type rdf:resource="#Jezioro"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Lampart -->
-
-    <owl:NamedIndividual rdf:about="#Lampart">
-        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Rodzaj"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Madagaskar -->
-
-    <owl:NamedIndividual rdf:about="#Madagaskar">
-        <rdf:type rdf:resource="#Wyspa"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Morze_Baltyckie -->
-
-    <owl:NamedIndividual rdf:about="#Morze_Baltyckie">
-        <rdf:type rdf:resource="#Morze"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Ocean_Arktyczny -->
-
-    <owl:NamedIndividual rdf:about="#Ocean_Arktyczny">
-        <rdf:type rdf:resource="#Ocean"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Ocean_Atlantycki -->
-
-    <owl:NamedIndividual rdf:about="#Ocean_Atlantycki">
-        <rdf:type rdf:resource="#Ocean"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Ocean_Indyjski -->
-
-    <owl:NamedIndividual rdf:about="#Ocean_Indyjski">
-        <rdf:type rdf:resource="#Ocean"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Ocean_Spokojny -->
-
-    <owl:NamedIndividual rdf:about="#Ocean_Spokojny">
-        <rdf:type rdf:resource="#Ocean"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Slimak_winniczek -->
-
-    <owl:NamedIndividual rdf:about="#Slimak_winniczek">
-        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Gatunek"/>
-        <nalezy_do_rodzaju rdf:resource="#Helix"/>
-    </owl:NamedIndividual>
-    
-
-
-    <!-- #Slimaki -->
-
-    <owl:NamedIndividual rdf:about="#Slimaki">
-        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Gromada"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Afryka -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Afryka">
-        <rdf:type rdf:resource="#Kontynent"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Kontynent"/>
     </owl:NamedIndividual>
     
 
@@ -607,7 +458,7 @@
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ameryka_Polnocna -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ameryka_Polnocna">
-        <rdf:type rdf:resource="#Kontynent"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Kontynent"/>
     </owl:NamedIndividual>
     
 
@@ -615,7 +466,23 @@
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ameryka_Poludniowa -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ameryka_Poludniowa">
-        <rdf:type rdf:resource="#Kontynent"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Kontynent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ameryka_Srodkowa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ameryka_Srodkowa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Kontynent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Antarktyda -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Antarktyda">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Kontynent"/>
     </owl:NamedIndividual>
     
 
@@ -632,7 +499,7 @@
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Australia -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Australia">
-        <rdf:type rdf:resource="#Kontynent"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Kontynent"/>
     </owl:NamedIndividual>
     
 
@@ -640,7 +507,15 @@
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Azja -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Azja">
-        <rdf:type rdf:resource="#Kontynent"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Kontynent"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Borneo -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Borneo">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Wyspa"/>
     </owl:NamedIndividual>
     
 
@@ -682,10 +557,26 @@
     
 
 
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Drapieznik -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Drapieznik">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha_psychiczna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Echolokalizowanie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Echolokalizowanie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Umiejetnosc_wrodzona"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Europa -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Europa">
-        <rdf:type rdf:resource="#Kontynent"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Kontynent"/>
     </owl:NamedIndividual>
     
 
@@ -705,14 +596,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Flamingi -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Flamingi">
-        <nalezy_do_rodzaju rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Flamingowe"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Flamingowe -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Flamingowe">
@@ -726,6 +609,55 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Gady">
         <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Gromada"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Grenlandia -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Grenlandia">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Wyspa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Helix -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Helix">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Rodzaj"/>
+        <nalezy_do_gromady rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Slimaki"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Hibernacja -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Hibernacja">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Umiejetnosc_wrodzona"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Instynkt_stadny -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Instynkt_stadny">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha_psychiczna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Jawa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Jawa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Wyspa"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Jezioro_Kaspijskie -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Jezioro_Kaspijskie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Jezioro"/>
     </owl:NamedIndividual>
     
 
@@ -771,14 +703,6 @@
     
 
 
-    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Kotowate -->
-
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Kotowate">
-        <nalezy_do_rodzaju rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Kot"/>
-    </owl:NamedIndividual>
-    
-
-
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Krazkoplawy -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Krazkoplawy">
@@ -787,10 +711,18 @@
     
 
 
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Lampart -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Lampart">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Rodzaj"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Latanie -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Latanie">
-        <rdf:type rdf:resource="#Umiejetnosc_nabyta"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Umiejetnosc_nabyta"/>
     </owl:NamedIndividual>
     
 
@@ -799,7 +731,7 @@
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Lew_afrykanski">
         <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Gatunek"/>
-        <nalezy_do_rodzaju rdf:resource="#Lampart"/>
+        <nalezy_do_rodzaju rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Lampart"/>
         <wystepuje_na_obszarze rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Afryka"/>
     </owl:NamedIndividual>
     
@@ -814,6 +746,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Madagaskar -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Madagaskar">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Wyspa"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Miesozernosc -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Miesozernosc">
@@ -822,9 +762,11 @@
     
 
 
-    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Morza -->
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Morze_Baltyckie -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Morza"/>
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Morze_Baltyckie">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Morze"/>
+    </owl:NamedIndividual>
     
 
 
@@ -856,10 +798,42 @@
     
 
 
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Arktyczny -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Arktyczny">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Atlantycki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Atlantycki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Indyjski -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Indyjski">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Spokojny -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Spokojny">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean"/>
+    </owl:NamedIndividual>
+    
+
+
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ogon -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ogon">
-        <rdf:type rdf:resource="#Cecha_fizyczna"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha_fizyczna"/>
     </owl:NamedIndividual>
     
 
@@ -911,7 +885,7 @@
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Pletwy -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Pletwy">
-        <rdf:type rdf:resource="#Cecha_fizyczna"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha_fizyczna"/>
     </owl:NamedIndividual>
     
 
@@ -919,7 +893,7 @@
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Plywanie -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Plywanie">
-        <rdf:type rdf:resource="#Umiejetnosc_nabyta"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Umiejetnosc_nabyta"/>
     </owl:NamedIndividual>
     
 
@@ -979,7 +953,24 @@
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Skrzydla -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Skrzydla">
-        <rdf:type rdf:resource="#Cecha_fizyczna"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha_fizyczna"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Slimak_winniczek -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Slimak_winniczek">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Gatunek"/>
+        <nalezy_do_rodzaju rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Helix"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Slimaki -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Slimaki">
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Gromada"/>
     </owl:NamedIndividual>
     
 
@@ -1025,7 +1016,7 @@
     <!-- http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Traba -->
 
     <owl:NamedIndividual rdf:about="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Traba">
-        <rdf:type rdf:resource="#Cecha_fizyczna"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Cecha_fizyczna"/>
     </owl:NamedIndividual>
     
 
@@ -1103,117 +1094,6 @@
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S8</rdfs:label>
-        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
-        <swrl:body>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
-                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Gatunek"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#nalezy_do_rodzaju"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Delfin"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:body>
-        <swrl:head>
-            <rdf:Description>
-                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                <rdf:first>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#posiada_ceche"/>
-                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
-                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Pletwy"/>
-                    </rdf:Description>
-                </rdf:first>
-                <rdf:rest>
-                    <rdf:Description>
-                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                        <rdf:first>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#posiada_umiejetnosc"/>
-                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
-                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Plywanie"/>
-                            </rdf:Description>
-                        </rdf:first>
-                        <rdf:rest>
-                            <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                <rdf:first>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#ma_sposob_odzywiania"/>
-                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
-                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Miesozernosc"/>
-                                    </rdf:Description>
-                                </rdf:first>
-                                <rdf:rest>
-                                    <rdf:Description>
-                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                        <rdf:first>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#wystepuje_na_obszarze"/>
-                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
-                                                <swrl:argument2 rdf:resource="#Ocean_Atlantycki"/>
-                                            </rdf:Description>
-                                        </rdf:first>
-                                        <rdf:rest>
-                                            <rdf:Description>
-                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                <rdf:first>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#wystepuje_na_obszarze"/>
-                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
-                                                        <swrl:argument2 rdf:resource="#Ocean_Spokojny"/>
-                                                    </rdf:Description>
-                                                </rdf:first>
-                                                <rdf:rest>
-                                                    <rdf:Description>
-                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
-                                                        <rdf:first>
-                                                            <rdf:Description>
-                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
-                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#posiada_ceche"/>
-                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
-                                                                <swrl:argument2 rdf:resource="#Instynkt_stadny"/>
-                                                            </rdf:Description>
-                                                        </rdf:first>
-                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                                    </rdf:Description>
-                                                </rdf:rest>
-                                            </rdf:Description>
-                                        </rdf:rest>
-                                    </rdf:Description>
-                                </rdf:rest>
-                            </rdf:Description>
-                        </rdf:rest>
-                    </rdf:Description>
-                </rdf:rest>
-            </rdf:Description>
-        </swrl:head>
-    </rdf:Description>
-    <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
-        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
         <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S9</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
@@ -1262,6 +1142,65 @@
                                 <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#ma_sposob_odzywiania"/>
                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
                                 <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Miesozernosc"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S13</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Gatunek"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#nalezy_do_rodzaju"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Lampart"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#posiada_ceche"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Drapieznik"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#posiada_liczbe_odnozy"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
+                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swrl:argument2>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1339,7 +1278,7 @@
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#posiada_ceche"/>
                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
-                                <swrl:argument2 rdf:resource="#Drapieznik"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Drapieznik"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1758,7 +1697,7 @@
                                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                 <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#wystepuje_na_obszarze"/>
                                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
-                                                <swrl:argument2 rdf:resource="#Ocean_Atlantycki"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Atlantycki"/>
                                             </rdf:Description>
                                         </rdf:first>
                                         <rdf:rest>
@@ -1769,7 +1708,7 @@
                                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#wystepuje_na_obszarze"/>
                                                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
-                                                        <swrl:argument2 rdf:resource="#Ocean_Spokojny"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Spokojny"/>
                                                     </rdf:Description>
                                                 </rdf:first>
                                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1889,7 +1828,7 @@
                                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#nalezy_do_gromady"/>
                                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#R"/>
-                                        <swrl:argument2 rdf:resource="#Slimaki"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Slimaki"/>
                                     </rdf:Description>
                                 </rdf:first>
                                 <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1917,7 +1856,7 @@
     <rdf:Description>
         <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
         <rdfs:comment rdf:datatype="http://www.w3.org/2001/XMLSchema#string"></rdfs:comment>
-        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S13</rdfs:label>
+        <rdfs:label rdf:datatype="http://www.w3.org/2001/XMLSchema#string">S8</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
         <swrl:body>
             <rdf:Description>
@@ -1937,7 +1876,7 @@
                                 <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                                 <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#nalezy_do_rodzaju"/>
                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
-                                <swrl:argument2 rdf:resource="#Lampart"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Delfin"/>
                             </rdf:Description>
                         </rdf:first>
                         <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
@@ -1953,7 +1892,7 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
                         <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#posiada_ceche"/>
                         <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
-                        <swrl:argument2 rdf:resource="#Drapieznik"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Pletwy"/>
                     </rdf:Description>
                 </rdf:first>
                 <rdf:rest>
@@ -1961,13 +1900,78 @@
                         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
                         <rdf:first>
                             <rdf:Description>
-                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
-                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#posiada_liczbe_odnozy"/>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#posiada_umiejetnosc"/>
                                 <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
-                                <swrl:argument2 rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</swrl:argument2>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Plywanie"/>
                             </rdf:Description>
                         </rdf:first>
-                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#ma_sposob_odzywiania"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Miesozernosc"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#wystepuje_na_obszarze"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Atlantycki"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#wystepuje_na_obszarze"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Ocean_Spokojny"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#posiada_ceche"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Instynkt_stadny"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#posiada_umiejetnosc"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#G"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/root/ontologies/2020/11/atlas_zwierzat#Echolokalizowanie"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
                     </rdf:Description>
                 </rdf:rest>
             </rdf:Description>
